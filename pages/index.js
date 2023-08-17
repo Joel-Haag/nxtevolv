@@ -146,10 +146,7 @@ export default function Home() {
 
 
     return (
-        <main
-            style={{
-            }}
-        >
+        <>
             <CustomCursor/>
             <Navbar
                 expand="lg"
@@ -227,7 +224,7 @@ export default function Home() {
                             </div>
                             <div className={styles.homeSecondContentContainer}>
                                 <Row className={styles.homeContentContainerLeft}>
-                                    <Col xs={12} sm={12} md={12}
+                                    <Col xs={12} sm={6} md={12}
                                          data-aos="fade-right"
                                          className={`${styles.homeContentColImgLeft}`}>
                                             <img
@@ -236,11 +233,11 @@ export default function Home() {
                                             />
 
                                     </Col>
-                                    <Col xs={12} md={6}
+                                    <Col xs={12} md={6} sm={6}
                                          className={styles.homeContentColTextLeftOne}
+                                           data-aos="zoom-in-up"
                                     >
                                             <div className={styles.homeContentContainerTextLeft}
-                                              data-aos="fade-left"
                                             >
                                                 <h3 className={`${styles.homeContentHeadingLeft} ${titleText.className}`}>Who
                                                     we
@@ -255,16 +252,18 @@ export default function Home() {
                                     </Col>
                                 </Row>
                                 <Row className={styles.homeContentContainerRight}>
-                                    <Col xs={12} md={6} className={styles.homeContentColImgRight}>
+                                    <Col xs={12} md={6} sm={6} className={styles.homeContentColImgRight}
+                                            data-aos="fade-right"
+                                    >
                                             <img
-                                                  data-aos="fade-left"
                                                 src="/homePageImages/car22.jpg"
                                                 className={styles.homeContentImgRight}
                                             />
                                     </Col>
-                                    <Col xs={12} md={6} className={styles.homeContentColTextRight}>
+                                    <Col xs={12} md={6} sm={6} className={styles.homeContentColTextRight}
+                                             data-aos="zoom-in-up"
+                                    >
                                             <div className={styles.homeContentContainerTextRight}
-                                              data-aos="fade-right"
                                             >
                                                 <h3 className={`${styles.homeContentHeadingRight} ${titleText.className}`}>What
                                                     we
@@ -281,16 +280,17 @@ export default function Home() {
                                     </Col>
                                 </Row>
                                 <Row className={styles.homeContentContainerLeft}>
-                                    <Col xs={12} md={6} className={styles.homeContentColImgLeft}>
+                                    <Col xs={12} md={6} sm={6} className={styles.homeContentColImgLeft}>
                                             <img
-                                                  data-aos="fade-right"
+                                                       data-aos="fade-right"
                                                 src="/homePageImages/car23.jpg"
                                                 className={styles.homeContentImgLeft}
                                             />
                                     </Col>
-                                    <Col xs={12} md={6} className={styles.homeContentColTextLeftTwo}>
+                                    <Col xs={12} md={6} sm={6} className={styles.homeContentColTextLeftTwo}
+                                       data-aos="zoom-in-up"
+                                    >
                                             <div className={styles.homeContentContainerTextLeft}
-                                              data-aos="fade-left"
                                             >
                                                 <h3 className={`${styles.homeContentHeadingLeft} ${titleText.className}`}>How
                                                     we
@@ -354,60 +354,11 @@ export default function Home() {
                                         </div>
                                     </div>
                                 </div>
-                                {/*<div className={styles.fourthContainer}>*/}
-                                {/*    <div className={styles.fourthContentHeading}>*/}
-                                {/*        <h3 className={styles.fourthContentHeadingText}>Our Vision</h3>*/}
-                                {/*    </div>*/}
-                                {/*    <div className={styles.visionImgContainer}>*/}
-                                {/*        <img*/}
-                                {/*            src="/lightBulb/lightBulb1Cut.png"*/}
-                                {/*            className={styles.homeVisionImg}*/}
-                                {/*        />*/}
-                                {/*    </div>*/}
-                                {/*    <div className={styles.visionTextContainer}>*/}
-                                {/*        <InViewAnimationRightSlide delay={100}>*/}
-                                {/*        <p className={styles.visionText}>*/}
-                                {/*            Our vision at Nxt Evolv Media*/}
-                                {/*        </p>*/}
-                                {/*        </InViewAnimationRightSlide>*/}
-                                {/*        <InViewAnimationRightSlide delay={100}>*/}
-                                {/*        <p className={styles.visionText}>*/}
-                                {/*            is created around our client's needs*/}
-                                {/*        </p>*/}
-                                {/*        </InViewAnimationRightSlide>*/}
-                                {/*        <InViewAnimationRightSlide delay={100}>*/}
-                                {/*        <p className={styles.visionText}>*/}
-                                {/*            and how we can help them achieve*/}
-                                {/*        </p>*/}
-                                {/*        </InViewAnimationRightSlide>*/}
-                                {/*        <InViewAnimationRightSlide delay={100}>*/}
-                                {/*        <p className={styles.visionText}>*/}
-                                {/*            their business objectives! Making sure*/}
-                                {/*        </p>*/}
-                                {/*        </InViewAnimationRightSlide>*/}
-                                {/*        <InViewAnimationRightSlide delay={100}>*/}
-                                {/*        <p className={styles.visionText}>that when a*/}
-                                {/*            client is dealing with Nxt*/}
-                                {/*        </p>*/}
-                                {/*        </InViewAnimationRightSlide>*/}
-                                {/*        <InViewAnimationRightSlide delay={100}>*/}
-                                {/*        <p className={styles.visionText}>*/}
-                                {/*            Evolv Media they will always be*/}
-                                {/*        </p>*/}
-                                {/*        </InViewAnimationRightSlide>*/}
-                                {/*        <InViewAnimationRightSlide delay={100}>*/}
-                                {/*        <p className={styles.visionText}>*/}
-                                {/*            winning and ahead*/}
-                                {/*            of the competition.*/}
-                                {/*        </p>*/}
-                                {/*        </InViewAnimationRightSlide>*/}
-                                {/*    </div>*/}
-                                {/*</div>*/}
                             </div>
                         </div>
                     </>
                 )}
             </div>
-        </main>
+        </>
     );
 }
