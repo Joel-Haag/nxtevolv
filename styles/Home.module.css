@@ -1,3 +1,24 @@
+.homePageContainer {
+    position: relative;
+}
+
+.homePageBackgroundPillar1 {
+    position: absolute;
+    width: 30rem;
+    top: 200%;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.homePageBackgroundPillar2 {
+    position: absolute;
+    width: 30rem;
+    top: 10%;
+    opacity: 0.2;
+    right: 0;
+    z-index: 1;
+}
+
 
 .homeContainer {
     height: 100vh;
@@ -272,6 +293,7 @@
 }
 
 .homeContentColImgRight {
+    z-index: 20;
     margin-right: 0;
     margin-left: auto;
 }
@@ -283,6 +305,7 @@
 
 
 .homeContentColTextRight {
+    z-index: 22;
     border-radius: 15px;
     display: flex;
     align-items: center;

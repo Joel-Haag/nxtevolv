@@ -31,6 +31,15 @@ export default function Home() {
     const [scrollPosition, setScrollPosition] = useState(0);
     const [pileScale, setPileScale] = useState(1);
     const [groundScale, setGroundScale] = useState(1);
+    const [pillar1Y, setPillar1Y] = useState(0);
+    const [pillar2Y, setPillar2Y] = useState(0);
+
+    const pillar1Style = {
+        transform: `translateY(${pillar1Y}%)`,
+    };
+    const pillar2Style = {
+        transform: `translateY(${pillar2Y}%)`,
+    };
 
     const [mousePosition, setMousePosition] = useState({x: 0, y: 0});
     useEffect(() => {
@@ -85,41 +94,45 @@ export default function Home() {
 
     const lightLineRef = useRef(null);
 
-   useEffect(() => {
-    const handleScroll = () => {
-        const currentScrollY = window.scrollY; // Get scroll position from the window
-        setScrollPosition(currentScrollY);
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY; // Get scroll position from the window
+            setScrollPosition(currentScrollY);
 
-        // Calculate pile image scale based on scroll position
-        const maxScale = 1.6;
-        const minScale = 0.5;
-        const scaleFactorPiles = (currentScrollY / (window.innerHeight * 0.5)) * (maxScale - minScale);
-        const scaleFactorImage = (currentScrollY / (window.innerHeight * 1)) * (maxScale - minScale);
-        const newPileScale = Math.max(minScale, maxScale - scaleFactorPiles);
-        const newGroundScale = Math.max(0.5, 1 - scaleFactorImage);
+            //for pillar backgrounds
+            const scrollProgress = scrollPosition / (document.body.scrollHeight - window.innerHeight);
+            setPillar1Y(-300 * scrollProgress);
+            setPillar2Y(800 * scrollProgress);
 
-        // Apply scale transformation to .pilesImage and .ImageLightContainer
-        setPileScale(newPileScale);
-        setGroundScale(newGroundScale);
+            // Calculate pile image scale based on scroll position
+            const maxScale = 1.6;
+            const minScale = 0.5;
+            const scaleFactorPiles = (currentScrollY / (window.innerHeight * 0.5)) * (maxScale - minScale);
+            const scaleFactorImage = (currentScrollY / (window.innerHeight * 1)) * (maxScale - minScale);
+            const newPileScale = Math.max(minScale, maxScale - scaleFactorPiles);
+            const newGroundScale = Math.max(0.5, 1 - scaleFactorImage);
 
-        // Check scroll direction
-        if (currentScrollY > scrollPosition) {
-            setScrollDirection('down');
-        } else if (currentScrollY < scrollPosition) {
-            setScrollDirection('up');
-        }
+            // Apply scale transformation to .pilesImage and .ImageLightContainer
+            setPileScale(newPileScale);
+            setGroundScale(newGroundScale);
 
-        // Update scroll position
-        setScrollPosition(currentScrollY);
-    };
+            // Check scroll direction
+            if (currentScrollY > scrollPosition) {
+                setScrollDirection('down');
+            } else if (currentScrollY < scrollPosition) {
+                setScrollDirection('up');
+            }
 
-    window.addEventListener('scroll', handleScroll); // Use window scroll event
+            // Update scroll position
+            setScrollPosition(currentScrollY);
+        };
 
-    return () => {
-        window.removeEventListener('scroll', handleScroll); // Remove the event listener when component unmounts
-    };
-}, [scrollPosition]);
+        window.addEventListener('scroll', handleScroll); // Use window scroll event
 
+        return () => {
+            window.removeEventListener('scroll', handleScroll); // Remove the event listener when component unmounts
+        };
+    }, [scrollPosition]);
 
 
     useEffect(() => {
@@ -147,7 +160,11 @@ export default function Home() {
 
 
     return (
-        <>
+        <div className={styles.homePageContainer}>
+            <img src={"/backgroundPillar/pillar1.png"} alt="Your GIF" className={styles.homePageBackgroundPillar1}
+                 style={pillar1Style}/>
+            <img src={"/backgroundPillar/pillar2.png"} alt="Your GIF" className={styles.homePageBackgroundPillar2}
+                 style={pillar2Style}/>
             <CustomCursor/>
             <Navbar
                 expand="lg"
@@ -228,83 +245,84 @@ export default function Home() {
                                     <Col xs={12} sm={6} md={12}
                                          data-aos="fade-right"
                                          className={`${styles.homeContentColImgLeft}`}>
-                                            <img
-                                                src="/homePageImages/car12.jpg"
-                                                className={styles.homeContentImgLeft}
-                                            />
+                                        <img
+                                            src="/homePageImages/car12.jpg"
+                                            className={styles.homeContentImgLeft}
+                                        />
 
                                     </Col>
                                     <Col xs={12} md={6} sm={6}
                                          className={styles.homeContentColTextLeftOne}
-                                           data-aos="zoom-in-up"
+                                         data-aos="zoom-in-up"
                                     >
-                                            <div className={styles.homeContentContainerTextLeft}
-                                            >
-                                                <h3 className={`${styles.homeContentHeadingLeft} ${titleText.className}`}>Who
-                                                    we
-                                                    are.</h3>
-                                                <p className={`${styles.homeContentTextLeft} ${titleText.className}`}>Nxt
-                                                    Evolv
-                                                    Media is a
-                                                    digital marketing and media agency that prides
-                                                    itself
-                                                    in improving and building businesses!</p>
-                                            </div>
+                                        <div className={styles.homeContentContainerTextLeft}
+                                        >
+                                            <h3 className={`${styles.homeContentHeadingLeft} ${titleText.className}`}>Who
+                                                we
+                                                are.</h3>
+                                            <p className={`${styles.homeContentTextLeft} ${titleText.className}`}>Nxt
+                                                Evolv
+                                                Media is a
+                                                digital marketing and media agency that prides
+                                                itself
+                                                in improving and building businesses!</p>
+                                        </div>
                                     </Col>
                                 </Row>
                                 <Row className={styles.homeContentContainerRight}>
                                     <Col xs={12} md={6} sm={6} className={styles.homeContentColImgRight}
-                                            data-aos="fade-right"
+                                         data-aos="fade-right"
                                     >
-                                            <img
-                                                src="/homePageImages/car22.jpg"
-                                                className={styles.homeContentImgRight}
-                                            />
+                                        <img
+                                            src="/homePageImages/car22.jpg"
+                                            className={styles.homeContentImgRight}
+                                        />
                                     </Col>
                                     <Col xs={12} md={6} sm={6} className={styles.homeContentColTextRight}
-                                             data-aos="zoom-in-up"
+                                         data-aos="zoom-in-up"
                                     >
-                                            <div className={styles.homeContentContainerTextRight}
-                                            >
-                                                <h3 className={`${styles.homeContentHeadingRight} ${titleText.className}`}>What
-                                                    we
-                                                    do.</h3>
-                                                <p className={`${styles.homeContentTextRight} ${titleText.className}`}>We
-                                                    work
-                                                    on
-                                                    the highest quality strategy, using our many services to give your
-                                                    company
-                                                    the
-                                                    best digital presence possible</p>
+                                        <div className={styles.homeContentContainerTextRight}
+                                        >
+                                            <h3 className={`${styles.homeContentHeadingRight} ${titleText.className}`}>What
+                                                we
+                                                do.</h3>
+                                            <p className={`${styles.homeContentTextRight} ${titleText.className}`}>We
+                                                work
+                                                on
+                                                the highest quality strategy, using our many services to give your
+                                                company
+                                                the
+                                                best digital presence possible</p>
 
-                                                <div className={styles.homeAboutButton}> <Link className={styles.homeAboutLink} href={"about"}> About us</Link></div>
-                                            </div>
+                                            <div className={styles.homeAboutButton}><Link
+                                                className={styles.homeAboutLink} href={"about"}> About us</Link></div>
+                                        </div>
                                     </Col>
                                 </Row>
                                 <Row className={styles.homeContentContainerLeft}>
                                     <Col xs={12} md={6} sm={6} className={styles.homeContentColImgLeft}>
-                                            <img
-                                                       data-aos="fade-right"
-                                                src="/homePageImages/car23.jpg"
-                                                className={styles.homeContentImgLeft}
-                                            />
+                                        <img
+                                            data-aos="fade-right"
+                                            src="/homePageImages/car23.jpg"
+                                            className={styles.homeContentImgLeft}
+                                        />
                                     </Col>
                                     <Col xs={12} md={6} sm={6} className={styles.homeContentColTextLeftTwo}
-                                       data-aos="zoom-in-up"
+                                         data-aos="zoom-in-up"
                                     >
-                                            <div className={styles.homeContentContainerTextLeft}
-                                            >
-                                                <h3 className={`${styles.homeContentHeadingLeft} ${titleText.className}`}>How
-                                                    we
-                                                    do
-                                                    it.</h3>
-                                                <p className={`${styles.homeContentTextLeft} ${titleText.className}`}> We
-                                                    give
-                                                    you
-                                                    the brand you deserve via Social Media Marketing, Web design,
-                                                    Search engine optimization and more</p>
-                                                <div className={styles.homeAboutButton}>Services</div>
-                                            </div>
+                                        <div className={styles.homeContentContainerTextLeft}
+                                        >
+                                            <h3 className={`${styles.homeContentHeadingLeft} ${titleText.className}`}>How
+                                                we
+                                                do
+                                                it.</h3>
+                                            <p className={`${styles.homeContentTextLeft} ${titleText.className}`}> We
+                                                give
+                                                you
+                                                the brand you deserve via Social Media Marketing, Web design,
+                                                Search engine optimization and more</p>
+                                            <div className={styles.homeAboutButton}>Services</div>
+                                        </div>
                                     </Col>
                                 </Row>
                                 <div className={styles.thirdContainer}>
@@ -314,44 +332,44 @@ export default function Home() {
                                     <div className={styles.philosophyContainer}>
 
                                         <div className={styles.philosophyBoxOne}>
-                                                <p className={`${styles.philosophyTextOne} ${titleText.className}`}>At
-                                                    Nxt
-                                                    Evolv Media we believe in Excellence, a Strong Work Ethic, Great
-                                                    Overall Quality and Exponential Growth! Providing our clients with
-                                                    the
-                                                    utmost best!</p>
-                                                <p className={`${styles.philosophyTextOne} ${titleText.className}`}>-
-                                                    Gabriel Coelho, Founder and Owner.</p>
+                                            <p className={`${styles.philosophyTextOne} ${titleText.className}`}>At
+                                                Nxt
+                                                Evolv Media we believe in Excellence, a Strong Work Ethic, Great
+                                                Overall Quality and Exponential Growth! Providing our clients with
+                                                the
+                                                utmost best!</p>
+                                            <p className={`${styles.philosophyTextOne} ${titleText.className}`}>-
+                                                Gabriel Coelho, Founder and Owner.</p>
                                         </div>
 
                                         <div className={styles.philosophyBoxTwoContainer}>
                                             <div className={styles.philosophyBoxTwo}>
-                                                    <p className={`${styles.philosophyTextTwo} ${titleText.className}`}>
-                                                        <span className={styles.philosophyTextHead}> Excellence </span>
-                                                        <span className={`${styles.philosophyTextNormal}`}
-                                                              style={{"--scroll-position": `${scrollPosition}px`}}>
+                                                <p className={`${styles.philosophyTextTwo} ${titleText.className}`}>
+                                                    <span className={styles.philosophyTextHead}> Excellence </span>
+                                                    <span className={`${styles.philosophyTextNormal}`}
+                                                          style={{"--scroll-position": `${scrollPosition}px`}}>
                                                         in media and digital marketing means always striving for the
                                                         highest
                                                         standard of</span>
-                                                        <span className={styles.philosophyTextHead}> quality </span>
-                                                        <span className={styles.philosophyTextNormal}>
+                                                    <span className={styles.philosophyTextHead}> quality </span>
+                                                    <span className={styles.philosophyTextNormal}>
                                                         and achievement. It means having a
                                                         </span>
-                                                        <span
-                                                            className={styles.philosophyTextHead}> strong work ethic </span>
-                                                        <span className={styles.philosophyTextNormal}>
+                                                    <span
+                                                        className={styles.philosophyTextHead}> strong work ethic </span>
+                                                    <span className={styles.philosophyTextNormal}>
                                                         and putting hard work and effort necessary to succeed into each
                                                         and every approach. It means being open to
                                                         </span>
-                                                        <span className={styles.philosophyTextHead}> growth </span>
-                                                        <span className={styles.philosophyTextNormal}>
+                                                    <span className={styles.philosophyTextHead}> growth </span>
+                                                    <span className={styles.philosophyTextNormal}>
                                                         and learning, so that our company can continually improve and
                                                         evolve as a digital marketing and media agency. At Nxt Evolv Media we are
                                                         dedicated to excellence and are
                                                         committed to helping our clients achieve the highest levels of
                                                         success when it comes to their digital marketing presence and business goals.
                                                         </span>
-                                                    </p>
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -361,6 +379,6 @@ export default function Home() {
                     </>
                 )}
             </div>
-        </>
+        </div>
     );
 }
