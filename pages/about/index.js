@@ -93,12 +93,12 @@ export default function About() {
                     <div className="about-heading-underline"/>
                 </div>
                 <div className={`about-content-container`}>
-                    <p className={`about-content-text`}>
+                    <p className={`about-content-text ${titleText.className}`}>
                         <span className={"about-content-text-header"}>Nxt</span> Evolv Media is a digital marketing and
                         media agency that prides itself in improving and
                         building businesses!
                     </p>
-                    <p className={`about-content-text`}>
+                    <p className={`about-content-text ${titleText.className}`}>
                         Nxt <span className={"about-content-text-header"}>Evolv </span> Media provides
                         assistance in achieving client's business objectives by boosting their digital presence and
                         allowing the business to reach their target audience. By doing this, Nxt Evolv <span
@@ -108,7 +108,38 @@ export default function About() {
                     </p>
                 </div>
             </div>
+
+            {/*    APPROACH*/}
+            <div className="approach-container">
+                <div className={`approach-heading-container ${titleText.className}`}>
+                    <h1 className="approach-heading">APPROACH</h1>
+                    <div className="approach-heading-underline"/>
+                </div>
+                <div className={`approach-content-container`}>
+                    <img src={"/piles/4PillarPile.png"} alt="Your GIF" className={"approach-content-image"}/>
+                    <div className="approach-content-text-container">
+                        <p className={`approach-content-text ${titleText.className}`}>
+                            Nxt Evolv Media understands how time consuming, stressful and difficult it is to identify
+                            the
+                            best strategy for your businesses branding, marketing and web design needs. In search of the
+                            right fit is vital, and this may be challenging when there are a hundred other tasks to get
+                            to...
+                        </p>
+                        <p className={`approach-content-text ${titleText.className}`}>
+                            A simple solution.... Let us handle this for you! At Nxt Evolv Media we believe that a
+                            client's
+                            time should be spent handling important business tasks while we work on the highest quality
+                            strategy for their digital presence!
+                        </p>
+                        <p className={`approach-content-text ${titleText.className}`}>
+                            What you will be rewarded with: Less stress, more time and their media, marketing and
+                            branding
+                            goals met!
+                        </p>
+                    </div>
+                </div>
+            </div>
         </>
-)
+    )
 
 }
