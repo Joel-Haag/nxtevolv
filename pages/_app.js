@@ -1,6 +1,7 @@
 import '@/styles/globals.css'
 import '@/styles/navbar.css'
 import '@/styles/cursor.css'
+import '@/styles/about.css'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import {useEffect} from "react";

@@ -10,6 +10,7 @@ import Nav from "react-bootstrap/Nav";
 
 import {Orbitron, ABeeZee} from 'next/font/google'
 import CustomCursor from "@/components/CustomCursor/CustomCursor";
+import Link from "next/link";
 
 const roboto = Orbitron({
     subsets: ['latin'],
@@ -164,8 +165,8 @@ export default function Home() {
                     <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                     <Navbar.Collapse id="basic-navbar-nav ">
                         <Nav className="me-0 ms-auto ">
-                            <Nav.Link href="#home" className="nav-link nav-link-items">HOME</Nav.Link>
-                            <Nav.Link href="#link" className="nav-link nav-link-items">ABOUT US</Nav.Link>
+                            <Nav.Link href="" className="nav-link nav-link-items">HOME</Nav.Link>
+                            <Nav.Link href="about" className="nav-link nav-link-items">ABOUT US</Nav.Link>
                             <Nav.Link href="#link" className="nav-link nav-link-items">SERVICES</Nav.Link>
                             <Nav.Link href="#link" className="nav-link contact-link">CONTACT US</Nav.Link>
                         </Nav>
@@ -275,7 +276,8 @@ export default function Home() {
                                                     company
                                                     the
                                                     best digital presence possible</p>
-                                                <div className={styles.homeAboutButton}>About us</div>
+
+                                                <div className={styles.homeAboutButton}> <Link className={styles.homeAboutLink} href={"about"}> About us</Link></div>
                                             </div>
                                     </Col>
                                 </Row>

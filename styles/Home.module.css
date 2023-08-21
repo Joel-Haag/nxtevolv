@@ -335,6 +335,16 @@
     transition: transform 0.3s ease;
 }
 
+.homeAboutLink {
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.3rem;
+}
+
+.homeAboutLink {
+    cursor: none;
+}
+
 .homeAboutButton:hover {
     transform: scale(1.4);
     cursor: none !important;
