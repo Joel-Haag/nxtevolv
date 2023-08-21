@@ -24,6 +24,20 @@ export default function About() {
     const [scrollDirection, setScrollDirection] = useState('none');
     const [scrollPosition, setScrollPosition] = useState(0);
 
+    // Calculate scroll progress
+    const scrollProgress = scrollPosition / (document.body.scrollHeight - window.innerHeight);
+
+    // Calculate new vertical positions for pillar backgrounds
+    const pillar1Y = -150 * scrollProgress; // Adjust the factor as needed
+    const pillar2Y = 300 * scrollProgress; // Adjust the factor as needed
+
+
+    const pillar1Style = {
+        transform: `translateY(${pillar1Y}%)`,
+    };
+    const pillar2Style = {
+        transform: `translateY(${pillar2Y}%)`,
+    };
 
     useEffect(() => {
         const handleScroll = () => {
@@ -60,7 +74,9 @@ export default function About() {
 
 
     return (
-        <>
+        <div className={"about-page-container"}>
+            <img src={"/backgroundPillar/pillar1.png"} alt="Your GIF" className="about-page-background-pillar-1" style={pillar1Style}/>
+            <img src={"/backgroundPillar/pillar1.png"} alt="Your GIF" className="about-page-background-pillar-2" style={pillar2Style}/>
             <CustomCursor/>
             <Navbar
                 expand="lg"
@@ -117,7 +133,8 @@ export default function About() {
                 </div>
                 <div className={`approach-content-container`}>
                     <div className={`approach-content-image-container `}>
-                        <img src={"/piles/4PillarPile.png"} alt="Your GIF" className={"approach-content-image"} data-aos="zoom-in"/>
+                        <img src={"/piles/4PillarPile.png"} alt="Your GIF" className={"approach-content-image"}
+                             data-aos="zoom-in"/>
                     </div>
                     <div className="approach-content-text-container">
                         <p className={`approach-content-text ${titleText.className}`} data-aos="fade-left">
@@ -150,7 +167,8 @@ export default function About() {
                 </div>
                 <div className={`vision-content-container`}>
                     <div className={"vision-content-image-container"}>
-                        <img src={"/vision/vision.webp"} alt="Your GIF" className={"vision-content-image"} data-aos="flip-left"/>
+                        <img src={"/vision/vision.webp"} alt="Your GIF" className={"vision-content-image"}
+                             data-aos="flip-left"/>
                     </div>
                     <div className="vision-content-text-container">
                         <p className={`vision-content-text ${titleText.className}`} data-aos="zoom-out-right">
@@ -165,7 +183,7 @@ export default function About() {
                 </div>
             </div>
 
-        </>
+        </div>
     )
 
 }
