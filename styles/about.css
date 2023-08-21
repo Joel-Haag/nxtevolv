@@ -67,7 +67,7 @@
 .approach-container {
     display: flex;
     flex-direction: column;
-    height: 80vh;
+    height: 120vh;
 }
 
 .approach-heading-container {
@@ -94,6 +94,13 @@
     margin-top: 1rem;
 }
 
+.approach-content-image-container {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    margin: 5rem 0 0;
+}
+
 .approach-content-container {
     width: 80%;
     display: flex;
@@ -102,7 +109,9 @@
 }
 
 .approach-content-image {
-    width: 40rem;
+    margin-top: 10rem;
+    width: 25rem;
+    height: 15rem;
 }
 
 .approach-content-text-container {
@@ -147,4 +156,109 @@
     .approach-content-image {
         width: 0;
     }
+
+    .approach-content-text-container {
+        width: 100%;
+    }
+
+    .approach-content-image-container {
+        width: 0;
+    }
 }
+
+.vision-container {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+}
+
+.vision-heading-container {
+    width: 50%;
+    margin-right: 0;
+    margin-left: auto;
+    position: relative;
+}
+
+.vision-heading {
+    font-size: 4rem;
+    font-weight: 500;
+    color: #1dcbcb;
+    text-align: center;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+}
+
+.vision-heading-underline {
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    height: 0.2rem;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #47afaf, rgba(255, 255, 255, 0));
+    margin-top: 1rem;
+}
+
+.vision-content-container {
+    width: 98%;
+    display: flex;
+    flex-direction: row;
+    margin: 5rem auto 0;
+}
+
+.vision-content-image-container{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.vision-content-image {
+    width: 30rem;
+}
+
+.vision-content-text-container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin: 5rem auto 0;
+}
+.vision-content-text {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-align: justify;
+}
+
+@media (max-width: 700px){
+    .vision-heading-container {
+        width: 100%;
+    }
+
+    .vision-heading-underline {
+        width: 100%;
+        left: 0;
+    }
+
+    .vision-heading {
+        font-size: 2rem;
+        letter-spacing: 0.5rem;
+    }
+
+    .vision-content-container {
+        margin-top: 0;
+        width: 95%;
+    }
+
+    .vision-content-text {
+        font-size: 1rem;
+    }
+
+    .vision-content-image {
+        width: 0;
+    }
+
+    .vision-content-image-container {
+        width: 0;
+    }
+}
+
+
+

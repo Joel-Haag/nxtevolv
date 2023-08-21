@@ -86,7 +86,7 @@ export default function About() {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-
+            {/*ABOUT SECTION*/}
             <div className="about-container">
                 <div className={`about-heading-container ${titleText.className}`}>
                     <h1 className="about-heading">ABOUT US</h1>
@@ -109,14 +109,16 @@ export default function About() {
                 </div>
             </div>
 
-            {/*    APPROACH*/}
+            {/*APPROACH SECTION*/}
             <div className="approach-container">
                 <div className={`approach-heading-container ${titleText.className}`}>
                     <h1 className="approach-heading">APPROACH</h1>
                     <div className="approach-heading-underline"/>
                 </div>
                 <div className={`approach-content-container`}>
-                    <img src={"/piles/4PillarPile.png"} alt="Your GIF" className={"approach-content-image"}/>
+                    <div className={`approach-content-image-container `}>
+                        <img src={"/piles/4PillarPile.png"} alt="Your GIF" className={"approach-content-image"}/>
+                    </div>
                     <div className="approach-content-text-container">
                         <p className={`approach-content-text ${titleText.className}`}>
                             Nxt Evolv Media understands how time consuming, stressful and difficult it is to identify
@@ -139,6 +141,30 @@ export default function About() {
                     </div>
                 </div>
             </div>
+
+            {/*VISION SECTION*/}
+            <div className="vision-container">
+                <div className={`vision-heading-container ${titleText.className}`}>
+                    <h1 className="vision-heading">WHAT'S THE VISION</h1>
+                    <div className="vision-heading-underline"/>
+                </div>
+                <div className={`vision-content-container`}>
+                    <div className={"vision-content-image-container"}>
+                        <img src={"/vision/vision.webp"} alt="Your GIF" className={"vision-content-image"}/>
+                    </div>
+                    <div className="vision-content-text-container">
+                        <p className={`vision-content-text ${titleText.className}`}>
+                            Our vision at Nxt Evolv Media is created around our client's needs and how we can help them
+                            achieve their business objectives! Making sure that when a client is dealing with Nxt Evolv
+                            Media they will always be winning and ahead of the competition.
+                        </p>
+                        <p className={`vision-content-text ${titleText.className}`}>
+                            Our primary focus is our client's ROI, digital presence and brand.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
         </>
     )
 
