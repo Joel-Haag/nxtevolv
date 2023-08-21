@@ -158,7 +158,7 @@ export default function About() {
                             achieve their business objectives! Making sure that when a client is dealing with Nxt Evolv
                             Media they will always be winning and ahead of the competition.
                         </p>
-                        <p className={`vision-content-text ${titleText.className}`} data-aos="zoom-out-left">
+                        <p className={`vision-content-text ${titleText.className}`} data-aos="zoom-out-right">
                             Our primary focus is our client's ROI, digital presence and brand.
                         </p>
                     </div>
