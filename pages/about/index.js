@@ -112,28 +112,28 @@ export default function About() {
             {/*APPROACH SECTION*/}
             <div className="approach-container">
                 <div className={`approach-heading-container ${titleText.className}`}>
-                    <h1 className="approach-heading">APPROACH</h1>
+                    <h1 className="approach-heading" data-aos="fade-right">APPROACH</h1>
                     <div className="approach-heading-underline"/>
                 </div>
                 <div className={`approach-content-container`}>
                     <div className={`approach-content-image-container `}>
-                        <img src={"/piles/4PillarPile.png"} alt="Your GIF" className={"approach-content-image"}/>
+                        <img src={"/piles/4PillarPile.png"} alt="Your GIF" className={"approach-content-image"} data-aos="zoom-in"/>
                     </div>
                     <div className="approach-content-text-container">
-                        <p className={`approach-content-text ${titleText.className}`}>
+                        <p className={`approach-content-text ${titleText.className}`} data-aos="fade-left">
                             Nxt Evolv Media understands how time consuming, stressful and difficult it is to identify
                             the
                             best strategy for your businesses branding, marketing and web design needs. In search of the
                             right fit is vital, and this may be challenging when there are a hundred other tasks to get
                             to...
                         </p>
-                        <p className={`approach-content-text ${titleText.className}`}>
+                        <p className={`approach-content-text ${titleText.className}`} data-aos="fade-right">
                             A simple solution.... Let us handle this for you! At Nxt Evolv Media we believe that a
                             client's
                             time should be spent handling important business tasks while we work on the highest quality
                             strategy for their digital presence!
                         </p>
-                        <p className={`approach-content-text ${titleText.className}`}>
+                        <p className={`approach-content-text ${titleText.className}`} data-aos="fade-left">
                             What you will be rewarded with: Less stress, more time and their media, marketing and
                             branding
                             goals met!
@@ -144,21 +144,21 @@ export default function About() {
 
             {/*VISION SECTION*/}
             <div className="vision-container">
-                <div className={`vision-heading-container ${titleText.className}`}>
+                <div className={`vision-heading-container ${titleText.className}`} data-aos="zoom-in-down">
                     <h1 className="vision-heading">WHAT'S THE VISION</h1>
                     <div className="vision-heading-underline"/>
                 </div>
                 <div className={`vision-content-container`}>
                     <div className={"vision-content-image-container"}>
-                        <img src={"/vision/vision.webp"} alt="Your GIF" className={"vision-content-image"}/>
+                        <img src={"/vision/vision.webp"} alt="Your GIF" className={"vision-content-image"} data-aos="flip-left"/>
                     </div>
                     <div className="vision-content-text-container">
-                        <p className={`vision-content-text ${titleText.className}`}>
+                        <p className={`vision-content-text ${titleText.className}`} data-aos="zoom-out-right">
                             Our vision at Nxt Evolv Media is created around our client's needs and how we can help them
                             achieve their business objectives! Making sure that when a client is dealing with Nxt Evolv
                             Media they will always be winning and ahead of the competition.
                         </p>
-                        <p className={`vision-content-text ${titleText.className}`}>
+                        <p className={`vision-content-text ${titleText.className}`} data-aos="zoom-out-left">
                             Our primary focus is our client's ROI, digital presence and brand.
                         </p>
                     </div>
