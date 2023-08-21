@@ -23,13 +23,9 @@ export default function About() {
     const [showNavbar, setShowNavbar] = useState(true);
     const [scrollDirection, setScrollDirection] = useState('none');
     const [scrollPosition, setScrollPosition] = useState(0);
+    const [pillar1Y, setPillar1Y] = useState(0);
+    const [pillar2Y, setPillar2Y] = useState(0);
 
-    // Calculate scroll progress
-    const scrollProgress = scrollPosition / (document.body.scrollHeight - window.innerHeight);
-
-    // Calculate new vertical positions for pillar backgrounds
-    const pillar1Y = -150 * scrollProgress; // Adjust the factor as needed
-    const pillar2Y = 300 * scrollProgress; // Adjust the factor as needed
 
 
     const pillar1Style = {
@@ -44,6 +40,9 @@ export default function About() {
             const currentScrollY = window.scrollY; // Get scroll position from the window
             setScrollPosition(currentScrollY);
 
+            const scrollProgress = scrollPosition / (document.body.scrollHeight - window.innerHeight);
+            setPillar1Y(-150 * scrollProgress);
+            setPillar2Y(300 * scrollProgress);
 
             // Check scroll direction
             if (currentScrollY > scrollPosition) {
@@ -76,7 +75,7 @@ export default function About() {
     return (
         <div className={"about-page-container"}>
             <img src={"/backgroundPillar/pillar1.png"} alt="Your GIF" className="about-page-background-pillar-1" style={pillar1Style}/>
-            <img src={"/backgroundPillar/pillar1.png"} alt="Your GIF" className="about-page-background-pillar-2" style={pillar2Style}/>
+            <img src={"/backgroundPillar/pillar2.png"} alt="Your GIF" className="about-page-background-pillar-2" style={pillar2Style}/>
             <CustomCursor/>
             <Navbar
                 expand="lg"

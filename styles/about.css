@@ -7,14 +7,16 @@
     width: 25rem;
     top: 50%;
     opacity: 0.5;
+    z-index: 1;
 }
 
 .about-page-background-pillar-2 {
     position: absolute;
-    width: 25rem;
+    width: 30rem;
     top: 10%;
     opacity: 0.5;
     right: 0;
+    z-index: 1;
 }
 
 .about-container {
@@ -137,6 +139,9 @@
 }
 
 .approach-content-text-container {
+    z-index: 20;
+    opacity: 0.6;
+    background: black;
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -190,12 +195,15 @@
 }
 
 .vision-container {
+    z-index: 20;
     display: flex;
     flex-direction: column;
     height: 80vh;
 }
 
 .vision-heading-container {
+    background-color: black;
+    z-index: 20;
     width: 50%;
     margin-right: 0;
     margin-left: auto;
@@ -203,6 +211,7 @@
 }
 
 .vision-heading {
+    z-index: 20;
     font-size: 4rem;
     font-weight: 500;
     color: #1dcbcb;
@@ -212,6 +221,7 @@
 }
 
 .vision-heading-underline {
+    z-index: 20;
     position: absolute;
     width: 80%;
     left: 10%;
@@ -221,28 +231,34 @@
 }
 
 .vision-content-container {
+    z-index: 20;
     width: 98%;
     display: flex;
     flex-direction: row;
     margin: 5rem auto 0;
 }
 
-.vision-content-image-container{
+.vision-content-image-container {
     width: 50%;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
+
 .vision-content-image {
     width: 30rem;
 }
 
 .vision-content-text-container {
+    z-index: 22;
+    background: black;
+    opacity: 0.6;
     width: 40%;
     display: flex;
     flex-direction: column;
     margin: 0 auto 0;
 }
+
 .vision-content-text {
     margin-top: 2rem;
     font-size: 1.5rem;
@@ -250,7 +266,7 @@
     text-align: justify;
 }
 
-@media (max-width: 700px){
+@media (max-width: 700px) {
     .vision-heading-container {
         width: 100%;
     }
