@@ -161,10 +161,16 @@ export default function Home() {
 
     return (
         <div className={styles.homePageContainer}>
-            <img src={"/backgroundPillar/pillar1.png"} alt="Your GIF" className={styles.homePageBackgroundPillar1}
-                 style={pillar1Style}/>
-            <img src={"/backgroundPillar/pillar2.png"} alt="Your GIF" className={styles.homePageBackgroundPillar2}
-                 style={pillar2Style}/>
+            {!logoVisible && (
+                <>
+                    <img src={"/backgroundPillar/pillar1.png"} alt="Your GIF"
+                         className={styles.homePageBackgroundPillar1}
+                         style={pillar1Style}/>
+                    <img src={"/backgroundPillar/pillar2.png"} alt="Your GIF"
+                         className={styles.homePageBackgroundPillar2}
+                         style={pillar2Style}/>
+                </>
+            )}
             <CustomCursor/>
             <Navbar
                 expand="lg"
