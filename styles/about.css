@@ -287,3 +287,201 @@
     width: 100%;
     z-index: -1;
 }
+
+.about-approach-section-header {
+    text-align: center;
+    padding-top: 13rem;
+}
+
+.about-approach-section-heading {
+    text-align: center;
+    opacity: 1;
+    font-size: 4rem;
+    color: white;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.about-approach-section-heading-blue {
+    color: #49ccfc;
+    margin-top: 0;
+    padding-top: 0;
+    margin-right: 8%;
+}
+
+.about-approach-section-text {
+    /*margin-right: 50%;*/
+    text-align: right;
+    margin-left: 27%;
+    width: 30%;
+
+}
+
+.about-approach-section-paragraph-one {
+    color: #ffffff;
+    font-size: 1.3rem;
+}
+
+.about-approach-section-paragraph-two {
+    padding-top: 2rem;
+    color: #ffffff;
+    font-size: 1.3rem;
+}
+
+/*media queries for approach section*/
+@media screen and (max-width: 768px) {
+    .about-approach-section-container {
+        height: 100%;
+    }
+
+    .about-approach-section-overlay {
+        height: 100%;
+    }
+
+    .about-approach-section-header {
+        text-align: center;
+        padding-top: 13rem;
+    }
+
+    .about-approach-section-heading {
+        text-align: center;
+        opacity: 1;
+        font-size: 3rem;
+        color: white;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .about-approach-section-heading-blue {
+        color: #49ccfc;
+        margin-top: 0;
+        padding-top: 0;
+        margin-right: 8%;
+    }
+
+    .about-approach-section-text {
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0.2rem;
+        border: solid rgba(255, 0, 0, 0);
+        width: 100%;
+    }
+
+    .about-approach-section-paragraph-one {
+        color: #ffffff;
+        font-size: 1.3rem;
+    }
+
+    .about-approach-section-paragraph-two {
+        padding-top: 2rem;
+        color: #ffffff;
+        font-size: 1.3rem;
+    }
+}
+
+/*Gap section 2*/
+/*The gap with logo symbols coming up*/
+.about-gap-section-two-container {
+    position: relative;
+    background-image: url(../public/about/backgroundClouds.gif);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
+}
+
+/*adding image as overlay*/
+.about-gap-section-two-container-overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.81); /* Adjust the opacity here */
+    background-image: url(../public/about/Colourblur.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+}
+
+.about-gap-two-pillars-container {
+    padding-top: 10rem;
+}
+
+.about-gap-two-pillar-one {
+    position: absolute;
+    left: -15rem;
+    top: 15rem;
+    width: 50rem;
+    height: 59rem;
+}
+
+.about-gap-two-pillar-two {
+    position: absolute;
+    left: 40rem;
+    top: 0rem;
+    width: 50rem;
+    transform: scaleX(-1);
+}
+
+
+/*media queries for pillars*/
+@media screen and (max-width: 768px) {
+    .about-gap-two-pillar-one {
+        width: 0;
+        height: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .about-gap-two-pillar-two {
+             width: 0;
+        height: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .about-gap-one-pillar-one {
+            width: 0;
+        height: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .about-gap-one-pillar-two {
+             width: 0;
+        height: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .about-gap-one-pillar-three {
+            width: 0;
+        height: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .about-gap-one-pillar-four {
+             width: 0;
+        height: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
