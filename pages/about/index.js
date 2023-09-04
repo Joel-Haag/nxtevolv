@@ -227,8 +227,29 @@ export default function About() {
             </div>
 
 
-            {/*VISION SECTION*/
-            }
+            {/*VISION SECTION*/}
+            <div className={"about-vision-section-container"}>
+                <div className={"about-vision-section-overlay"}></div>
+                <div className={"about-vision-section-content"}>
+                    <div className={"about-vision-section-header"}>
+                        <h1 className={`about-vision-section-heading ${roboto.className}`}>
+                            WHAT'S THE
+                        </h1>
+                        <h1 className={`about-vision-section-heading ${roboto.className}`}><span
+                            className={"about-vision-section-heading-blue"}> VISION</span></h1>
+                    </div>
+                    <div className={"about-vision-section-text"}>
+                        <p className={`about-vision-section-paragraph-one ${titleText.className}`}>
+                            Our vision at Nxt Evolv Media is created around our client's needs and how we can help them
+                            achieve their business objectives! Making sure that when a client is dealing with Nxt Evolv
+                            Media they will always be winning and ahead of the competition.
+                        </p>
+                        <p className={`about-vision-section-paragraph-two ${titleText.className}`}>
+                            Our primary focus is our client's ROI, digital presence and brand.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
 
         </div>
