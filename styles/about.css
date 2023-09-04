@@ -290,7 +290,7 @@
 
 .about-approach-section-header {
     text-align: center;
-    padding-top: 13rem;
+    padding-top: 10rem;
 }
 
 .about-approach-section-heading {
@@ -484,4 +484,71 @@
         right: 0;
         bottom: 0;
     }
+}
+
+/*Vision section*/
+.about-vision-section-container {
+    position: relative;
+    background-image: url(../public/about/backgroundClouds.gif);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
+}
+
+/*adding image as overlay*/
+.about-vision-section-overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.81); /* Adjust the opacity here */
+    background-image: url(../public/about/Colourblur.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+}
+
+.about-vision-section-header {
+    padding-top: 13rem;
+    width: 50%;
+    margin-left: 15%;
+}
+
+.about-vision-section-heading {
+    opacity: 1;
+    font-size: 4rem;
+    color: white;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.about-vision-section-heading-blue {
+    color: #49ccfc;
+    margin-top: 0;
+    padding-top: 0;
+    margin-right: 8%;
+}
+
+.about-vision-section-text {
+    text-align: left;
+    margin-left: 55%;
+    width: 30%;
+
+}
+
+
+.about-vision-section-paragraph-one {
+    color: #ffffff;
+    font-size: 1.3rem;
+}
+
+.about-vision-section-paragraph-two {
+    padding-top: 2rem;
+    color: #ffffff;
+    font-size: 1.3rem;
 }
