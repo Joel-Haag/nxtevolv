@@ -12,7 +12,7 @@ import {Orbitron, ABeeZee} from 'next/font/google'
 import CustomCursor from "@/components/CustomCursor/CustomCursor";
 import Link from "next/link";
 
-const roboto = Orbitron({
+const orbitron = Orbitron({
     subsets: ['latin'],
     weight: '400'
 })
@@ -102,7 +102,7 @@ export default function Home() {
             //for pillar backgrounds
             const scrollProgress = scrollPosition / (document.body.scrollHeight - window.innerHeight);
             setPillar1Y(-300 * scrollProgress);
-            setPillar2Y(800 * scrollProgress);
+            setPillar2Y(750 * scrollProgress);
 
             // Calculate pile image scale based on scroll position
             const maxScale = 1.6;
@@ -161,16 +161,12 @@ export default function Home() {
 
     return (
         <div className={styles.homePageContainer}>
-            {!logoVisible && (
-                <>
                     <img src={"/backgroundPillar/pillar1.png"} alt="Your GIF"
-                         className={styles.homePageBackgroundPillar1}
+                         className={`${styles.homePageBackgroundPillar1}  ${logoVisible ? styles.hideBackGroundPillar : ''}`}
                          style={pillar1Style}/>
                     <img src={"/backgroundPillar/pillar2.png"} alt="Your GIF"
-                         className={styles.homePageBackgroundPillar2}
+                         className={`${styles.homePageBackgroundPillar2}  ${logoVisible ? styles.hideBackGroundPillar : ''}`}
                          style={pillar2Style}/>
-                </>
-            )}
             <CustomCursor/>
             <Navbar
                 expand="lg"
@@ -210,7 +206,8 @@ export default function Home() {
                     )}
                     {!logoVisible && (
                         <div className={styles.ImageLightContainer}
-                             style={{"--scroll-position": `${-scrollPosition}px`, transform: `scale(${groundScale})`}}>
+                             // style={{"--scroll-position": `${-scrollPosition}px`, transform: `scale(${groundScale})`}}>
+                            >
                             <div className={styles.groundImageContainer}
                                  style={{"--scroll-position": `${-scrollPosition}px`}}>
                                 <img src="/piles/Pile_1.png"
@@ -232,7 +229,7 @@ export default function Home() {
                         </div>
                     )}
                     <div className={`${styles.logoTextContainer} ${slideDown ? styles.textSlideDown : ''}`}>
-                        <h1 className={`${styles.homeLogoText} ${roboto.className}`}>
+                        <h1 className={`${styles.homeLogoText} ${orbitron.className}`}>
                             NXT . EVOLV . MEDIA
                         </h1>
                     </div>
@@ -242,7 +239,7 @@ export default function Home() {
                         <div className={styles.secondContainer}>
                             <div className={styles.sloganContainer}
                                  style={{"--scroll-position": `${-scrollPosition}px`}}>
-                                <h2 className={`${styles.sloganText} ${roboto.className}`}>The next evolution of media
+                                <h2 className={`${styles.sloganText} ${orbitron.className}`}>The next evolution of media
                                     and
                                     marketing.</h2>
                             </div>
