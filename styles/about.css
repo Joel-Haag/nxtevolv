@@ -98,7 +98,7 @@
 /*About about section */
 .about-about-section-container {
     position: relative;
-    background-image: url(../public/about/backgroundClouds.gif);
+    background-image: url(../public/about/cloudsDark.gif);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -111,7 +111,7 @@
 /*adding image as overlay*/
 .about-about-section-overlay {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.81); /* Adjust the opacity here */
+    /*opacity: 0.5;*/
     background-image: url(../public/about/Colourblur.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -202,7 +202,7 @@
 /*The gap with logo symbols coming up*/
 .about-gap-section-one-container {
     position: relative;
-    background-image: url(../public/about/backgroundClouds.gif);
+    background-image: url(../public/about/cloudsDark.gif);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -215,7 +215,6 @@
 /*adding image as overlay*/
 .about-gap-section-one-container-overlay {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.81); /* Adjust the opacity here */
     background-image: url(../public/about/Colourblur.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -264,7 +263,7 @@
 /*approach section*/
 .about-approach-section-container {
     position: relative;
-    background-image: url(../public/about/backgroundClouds.gif);
+    background-image: url(../public/about/cloudsDark.gif);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -277,7 +276,6 @@
 /*adding image as overlay*/
 .about-approach-section-overlay {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.81); /* Adjust the opacity here */
     background-image: url(../public/about/Colourblur.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -384,7 +382,7 @@
 /*The gap with logo symbols coming up*/
 .about-gap-section-two-container {
     position: relative;
-    background-image: url(../public/about/backgroundClouds.gif);
+    background-image: url(../public/about/cloudsDark.gif);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -397,7 +395,6 @@
 /*adding image as overlay*/
 .about-gap-section-two-container-overlay {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.81); /* Adjust the opacity here */
     background-image: url(../public/about/Colourblur.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -489,7 +486,7 @@
 /*Vision section*/
 .about-vision-section-container {
     position: relative;
-    background-image: url(../public/about/backgroundClouds.gif);
+    background-image: url(../public/about/cloudsDark.gif);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -502,7 +499,6 @@
 /*adding image as overlay*/
 .about-vision-section-overlay {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.81); /* Adjust the opacity here */
     background-image: url(../public/about/Colourblur.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -551,4 +547,56 @@
     padding-top: 2rem;
     color: #ffffff;
     font-size: 1.3rem;
+}
+
+/*Media queries for vision*/
+@media screen and (max-width: 768px) {
+    .about-vision-section-container {
+        height: 100%;
+    }
+
+    .about-vision-section-overlay {
+        height: 100%;
+    }
+
+    .about-vision-section-header {
+        padding-top: 13rem;
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .about-vision-section-heading {
+        opacity: 1;
+        font-size: 3rem;
+        color: white;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .about-vision-section-heading-blue {
+        color: #49ccfc;
+        margin-top: 0;
+        padding-top: 0;
+        margin-right: 8%;
+    }
+
+    .about-vision-section-text {
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0.2rem;
+        border: solid rgba(255, 0, 0, 0);
+        width: 100%;
+    }
+
+    .about-vision-section-paragraph-one {
+        color: #ffffff;
+        font-size: 1.3rem;
+    }
+
+    .about-vision-section-paragraph-two {
+        padding-top: 2rem;
+        color: #ffffff;
+        font-size: 1.3rem;
+    }
 }
