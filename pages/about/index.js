@@ -163,22 +163,72 @@ export default function About() {
                     <div className={"about-gap-section-one-container-overlay"}>
                     </div>
                     <div className={"about-gap-one-pillars-container"}>
-                    <img src={"/about/LogoSinglePillar_1.png"} alt="Your GIF" className={"about-gap-one-pillar-one"}/>
-                    <img src={"/backgroundPillar/pillar1.png"} alt="Your GIF" className={"about-gap-one-pillar-two"}/>
-                    <img src={"/backgroundPillar/pillar1.png"} alt="Your GIF" className={"about-gap-one-pillar-three"}/>
-                    <img src={"/backgroundPillar/pillar1.png"} alt="Your GIF" className={"about-gap-one-pillar-four"}/>
+                        <img src={"/about/LogoSinglePillar_1.png"} alt="Your GIF"
+                             className={"about-gap-one-pillar-one"}/>
+                        <img src={"/backgroundPillar/pillar1.png"} alt="Your GIF"
+                             className={"about-gap-one-pillar-two"}/>
+                        <img src={"/backgroundPillar/pillar1.png"} alt="Your GIF"
+                             className={"about-gap-one-pillar-three"}/>
+                        <img src={"/backgroundPillar/pillar1.png"} alt="Your GIF"
+                             className={"about-gap-one-pillar-four"}/>
                     </div>
                 </div>
             </div>
 
 
             {/*APPROACH SECTION*/}
-            <div className={"about-approach-section-container"}>
-                <div className={"about-approach-section-overlay"}></div>
+            <div className={"about-about-content-placing"}>
+                <div className={"about-approach-section-container"}>
+                    <div className={"about-approach-section-overlay"}></div>
+                    <div className={"about-approach-section-content"}>
+                        <div className={"about-approach-section-header"}>
+                            <h1 className={`about-approach-section-heading ${roboto.className}`}>
+                                WHAT'S THE
+                            </h1>
+                            <h1 className={`about-approach-section-heading ${roboto.className}`}><span
+                                className={"about-approach-section-heading-blue"}> APPROACH</span></h1>
+                        </div>
+                        <div className={"about-approach-section-text"}>
+                            <p className={`about-approach-section-paragraph-one ${titleText.className}`}>
+                                Nxt Evolv Media understands how time consuming, stressful and difficult it is to
+                                identify
+                                the best strategy for your businesses branding, marketing and web design needs. In
+                                search of
+                                the right fit is vital, and this may be challenging when there are a hundred other tasks
+                                to
+                                get to...
+                            </p>
+                            <p className={`about-approach-section-paragraph-two ${titleText.className}`}>
+                                A simple solution.... Let us handle this for you! At Nxt Evolv Media we believe that a
+                                client's time should be spent handling important business tasks while we work on the
+                                highest
+                                quality strategy for their digital presence!
+
+                                What you will be rewarded with: Less stress, more time and their media, marketing and
+                                branding goals met!
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                {/*  Gap section  */}
+                {/*GAP SECTION WITH LOGO SYMBOLS*/}
+                <div className={"about-gap-section-two-container"}>
+                    <div className={"about-gap-section-two-container-overlay"}>
+                    </div>
+                    <div className={"about-gap-two-pillars-container"}>
+                        <img src={"/about/LogoSinglePillar_1.png"} alt="Your GIF"
+                             className={"about-gap-two-pillar-one"}/>
+                        <img src={"/backgroundPillar/pillar1.png"} alt="Your GIF"
+                             className={"about-gap-two-pillar-two"}/>
+                    </div>
+                </div>
             </div>
 
 
-            {/*VISION SECTION*/}
+            {/*VISION SECTION*/
+            }
 
 
         </div>
