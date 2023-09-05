@@ -7,6 +7,7 @@ import {Orbitron, ABeeZee, Roboto} from 'next/font/google'
 import CustomCursor from "@/components/CustomCursor/CustomCursor";
 import {Container} from "react-bootstrap";
 import styles from '../../styles/Home.module.css'
+import {Parallax} from "react-scroll-parallax";
 
 
 const titleText = ABeeZee({
@@ -23,16 +24,7 @@ export default function About() {
     const [showNavbar, setShowNavbar] = useState(true);
     const [scrollDirection, setScrollDirection] = useState('none');
     const [scrollPosition, setScrollPosition] = useState(0);
-    const [pillar1Y, setPillar1Y] = useState(0);
-    const [pillar2Y, setPillar2Y] = useState(0);
 
-
-    const pillar1Style = {
-        transform: `translateY(${pillar1Y}%)`,
-    };
-    const pillar2Style = {
-        transform: `translateY(${pillar2Y}%)`,
-    };
 
     useEffect(() => {
         const handleScroll = () => {
@@ -70,6 +62,7 @@ export default function About() {
 
     return (
         <div className={"about-page-container"}>
+
             {/*3 dots*/}
             <div className="about-page-dot"></div>
             <div className="about-page-dot"></div>
@@ -105,8 +98,11 @@ export default function About() {
             {/*ABOUT HEADER SECTION*/}
 
             <div className={`about-header-container ${roboto.className}`}>
-                {/*<div className={"about-header-container-overlay"}>*/}
-                {/*</div>*/}
+                {/*Overlay effect with the blue*/}
+                <img src={"about/Colourblur.png"} alt="Your GIF"
+                     className={"about-page-container-overlay-blur"}/>
+
+                {/*end of overlay effect*/}
                 <div className={"about-header-content"}>
                     <h1 className={"about-header-heading"}> THE NEXT </h1>
                     <h1 className={"about-header-heading"}><span className={"about-header-blue"}> EVOLUTION </span>
@@ -127,14 +123,17 @@ export default function About() {
                     <img src={"/about/x.png"} alt="Your GIF" className={"about-x-img"}/>
                 </div>
                 <div className={"about-about-section-container"}>
-                    <div className={"about-about-section-overlay"}>
-                    </div>
+                    <img src={"about/Colourblur.png"} alt="Your GIF"
+                         className={"about-about-section-overlay"}/>
 
                     <div className={"about-about-section-content"}>
+
                         <div className={"about-about-section-header"}>
-                            <h1 className={`about-about-section-heading ${roboto.className}`}><span
-                                className={"about-header-blue"}> NXT EVOLV MEDIA </span>
-                            </h1>
+                            <Parallax speed={-30}>
+                                <h1 className={`about-about-section-heading ${roboto.className}`}><span
+                                    className={"about-header-blue"}> NXT EVOLV MEDIA </span>
+                                </h1>
+                            </Parallax>
                             <h1 className={`about-about-section-heading ${roboto.className}`}> ABOUT</h1>
                         </div>
                         <div className={"about-about-section-text"}>
@@ -160,17 +159,25 @@ export default function About() {
 
                 {/*GAP SECTION WITH LOGO SYMBOLS*/}
                 <div className={"about-gap-section-one-container"}>
-                    <div className={"about-gap-section-one-container-overlay"}>
-                    </div>
+                    <img src={"about/Colourblur.png"} alt="Your GIF"
+                         className={"about-gap-section-one-container-overlay"}/>
                     <div className={"about-gap-one-pillars-container"}>
-                        <img src={"/about/LogoSinglePillar_1.png"} alt="Your GIF"
-                             className={"about-gap-one-pillar-one"}/>
-                        <img src={"/backgroundPillar/pillar1.png"} alt="Your GIF"
-                             className={"about-gap-one-pillar-two"}/>
-                        <img src={"/backgroundPillar/pillar1.png"} alt="Your GIF"
-                             className={"about-gap-one-pillar-three"}/>
-                        <img src={"/backgroundPillar/pillar1.png"} alt="Your GIF"
-                             className={"about-gap-one-pillar-four"}/>
+                        <Parallax speed={10}>
+                            <img src={"/about/LogoSinglePillar_1.png"} alt="Your GIF"
+                                 className={"about-gap-one-pillar-one"}/>
+                        </Parallax>
+                        <Parallax speed={-20}>
+                            <img src={"/backgroundPillar/pillar1.png"} alt="Your GIF"
+                                 className={"about-gap-one-pillar-two"}/>
+                        </Parallax>
+                        <Parallax speed={30}>
+                            <img src={"/backgroundPillar/pillar1.png"} alt="Your GIF"
+                                 className={"about-gap-one-pillar-three"}/>
+                        </Parallax>
+                        <Parallax speed={-20}>
+                            <img src={"/backgroundPillar/pillar1.png"} alt="Your GIF"
+                                 className={"about-gap-one-pillar-four"}/>
+                        </Parallax>
                     </div>
                 </div>
             </div>
@@ -179,7 +186,8 @@ export default function About() {
             {/*APPROACH SECTION*/}
             <div className={"about-about-content-placing"}>
                 <div className={"about-approach-section-container"}>
-                    <div className={"about-approach-section-overlay"}></div>
+                    <img src={"about/Colourblur.png"} alt="Your GIF"
+                         className={"about-approach-section-overlay"}/>
                     <div className={"about-approach-section-content"}>
                         <div className={"about-approach-section-header"}>
                             <h1 className={`about-approach-section-heading ${roboto.className}`}>
@@ -215,13 +223,17 @@ export default function About() {
                 {/*  Gap section  */}
                 {/*GAP SECTION WITH LOGO SYMBOLS*/}
                 <div className={"about-gap-section-two-container"}>
-                    <div className={"about-gap-section-two-container-overlay"}>
-                    </div>
+                    <img src={"about/Colourblur.png"} alt="Your GIF"
+                         className={"about-gap-section-two-container-overlay"}/>
                     <div className={"about-gap-two-pillars-container"}>
-                        <img src={"/about/LogoSinglePillar_1.png"} alt="Your GIF"
-                             className={"about-gap-two-pillar-one"}/>
-                        <img src={"/backgroundPillar/pillar1.png"} alt="Your GIF"
-                             className={"about-gap-two-pillar-two"}/>
+                        <Parallax speed={20}>
+                            <img src={"/about/LogoSinglePillar_1.png"} alt="Your GIF"
+                                 className={"about-gap-two-pillar-one"}/>
+                        </Parallax>
+                        <Parallax speed={-20}>
+                            <img src={"/backgroundPillar/pillar1.png"} alt="Your GIF"
+                                 className={"about-gap-two-pillar-two"}/>
+                        </Parallax>
                     </div>
                 </div>
             </div>
@@ -229,7 +241,8 @@ export default function About() {
 
             {/*VISION SECTION*/}
             <div className={"about-vision-section-container"}>
-                <div className={"about-vision-section-overlay"}></div>
+                <img src={"about/Colourblur.png"} alt="Your GIF"
+                     className={"about-vision-section-overlay"}/>
                 <div className={"about-vision-section-content"}>
                     <div className={"about-vision-section-header"}>
                         <h1 className={`about-vision-section-heading ${roboto.className}`}>
