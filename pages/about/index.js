@@ -116,7 +116,6 @@ export default function About() {
 
             {/*ABOUT SECTION*/}
             <div className={"about-about-content-placing"}>
-                <img className={"about-about-progress-bar"} src={"/about/bottomProgressUp.png"} alt="Your GIF"/>
                 <div className={"about-circle-container"}>
                     <img src={"/about/circle.png"} alt="Your GIF" className={"about-circle-img"}/>
                 </div>
@@ -128,7 +127,8 @@ export default function About() {
                          className={"about-about-section-overlay"}/>
 
                     <div className={"about-about-section-content"}>
-
+                        <img className={"about-about-progress-bar"} src={"/about/bottomProgressUp.png"}
+                             alt="Your GIF"/>
                         <div className={"about-about-section-header"}>
                             <Parallax speed={-30}>
                                 <h1 className={`about-about-section-heading ${roboto.className}`}><span
@@ -160,6 +160,10 @@ export default function About() {
 
                 {/*GAP SECTION WITH LOGO SYMBOLS*/}
                 <div className={"about-gap-section-one-container"}>
+                    <img className={"about-about-progress-bar"} src={"/about/bottomProgressUp.png"}
+                         alt="Your GIF"/>
+                                         <img className={"about-about-progress-bar-two"} src={"/about/bottomProgressInvisible.png"}
+                         alt="Your GIF"/>
                     <img src={"about/Colourblur.png"} alt="Your GIF"
                          className={"about-gap-section-one-container-overlay"}/>
                     <div className={"about-gap-one-pillars-container"}>
@@ -186,11 +190,12 @@ export default function About() {
 
             {/*APPROACH SECTION*/}
             <div className={"about-approach-content-placing"}>
-                <img className={"about-approach-progress-bar-one"} src={"/about/bottomProgressInvisible.png"}
-                     alt="Your GIF"/>
-                {/*<img className={"about-approach-progress-bar-two"} src={"/about/bottomProgressUp.png"} alt="Your GIF"/>*/}
-
                 <div className={"about-approach-section-container"}>
+                    <img className={"about-approach-progress-bar-one"} src={"/about/bottomProgressInvisible.png"}
+                         alt="Your GIF"/>
+                    <img className={"about-approach-progress-bar-two"} src={"/about/bottomProgressUp.png"}
+                         alt="Your GIF"/>
+
                     <img src={"about/Colourblur.png"} alt="Your GIF"
                          className={"about-approach-section-overlay"}/>
                     <div className={"about-approach-section-content"}>
@@ -228,6 +233,12 @@ export default function About() {
                 {/*  Gap section  */}
                 {/*GAP SECTION WITH LOGO SYMBOLS*/}
                 <div className={"about-gap-section-two-container"}>
+                                 <img className={"about-approach-progress-bar-one"} src={"/about/bottomProgressInvisible.png"}
+                         alt="Your GIF"/>
+                    <img className={"about-approach-progress-bar-two"} src={"/about/bottomProgressUp.png"}
+                         alt="Your GIF"/>
+                         <img className={"about-vision-progress-bar-three"} src={"/about/bottomProgressInvisible.png"}
+                         alt="Your GIF"/>
                     <img src={"about/Colourblur.png"} alt="Your GIF"
                          className={"about-gap-section-two-container-overlay"}/>
                     <div className={"about-gap-two-pillars-container"}>
@@ -246,15 +257,15 @@ export default function About() {
 
             {/*VISION SECTION*/}
             <div className={"about-vision-content-placing"}>
-                    {/*<img className={"about-vision-progress-bar-one"} src={"/about/bottomProgressInvisible.png"}*/}
-                    {/*     alt="Your GIF"/>*/}
-                    {/*<img className={"about-vision-progress-bar-two"} src={"/about/bottomProgressInvisible.png"}*/}
-                    {/*     alt="Your GIF"/>*/}
-                    {/*<img className={"about-vision-progress-bar-three"} src={"/about/bottomProgressDown.png"}*/}
-                    {/*     alt="Your GIF"/>*/}
-                    {/*<img src={"about/Colourblur.png"} alt="Your GIF"*/}
-                    {/*     className={"about-vision-section-overlay"}/>*/}
                 <div className={"about-vision-section-container"}>
+                    <img className={"about-vision-progress-bar-one"} src={"/about/bottomProgressInvisible.png"}
+                         alt="Your GIF"/>
+                    <img className={"about-vision-progress-bar-two"} src={"/about/bottomProgressInvisible.png"}
+                         alt="Your GIF"/>
+                    <img className={"about-vision-progress-bar-three"} src={"/about/bottomProgressDown.png"}
+                         alt="Your GIF"/>
+                    <img src={"about/Colourblur.png"} alt="Your GIF"
+                         className={"about-vision-section-overlay"}/>
                     <div className={"about-vision-section-content"}>
                         <div className={"about-vision-section-header"}>
                             <h1 className={`about-vision-section-heading ${roboto.className}`}>

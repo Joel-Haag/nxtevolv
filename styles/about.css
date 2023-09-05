@@ -106,12 +106,21 @@
 }
 
 /*about about progress bar*/
+
 .about-about-progress-bar {
     position: fixed;
-    bottom: 4rem;
+    bottom: 2rem;
     left: 10rem;
+    z-index: 30;
     width: 0.7rem;
-    z-index: 1;
+}
+
+.about-about-progress-bar-two {
+        position: fixed;
+    bottom: 1rem;
+    left: 11.5rem;
+    z-index: 30;
+    width: 0.7rem;
 }
 
 /*About about section */
@@ -224,7 +233,7 @@
     background-position: center;
     height: 100vh;
     width: 100%;
-    z-index: 0;
+    z-index: -1;
 }
 
 /*adding image as overlay*/
@@ -280,7 +289,7 @@
 /*about approach progress bar*/
 .about-approach-progress-bar-one {
     position: fixed;
-    bottom: 4rem;
+    bottom: 2rem;
     left: 10rem;
     width: 0.7rem;
     z-index: 11 !important;
@@ -288,7 +297,7 @@
 
 .about-approach-progress-bar-two {
     position: fixed;
-    bottom: 3rem;
+    bottom: 1rem;
     left: 11.4rem;
     width: 0.7rem;
     z-index: 1;
@@ -417,7 +426,7 @@
     background-position: center;
     height: 100vh;
     width: 100%;
-    z-index: 2;
+    z-index: 1;
 }
 
 /*adding image as overlay*/
@@ -444,7 +453,7 @@
     position: absolute;
     left: 40rem;
     top: 0rem;
-    width: 50rem;
+    width: 45rem;
     transform: scaleX(-1);
     z-index: -1;
 }
@@ -511,14 +520,14 @@
 
 /*about-vision-content-placing*/
 .about-vision-content-placing {
-    z-index: 7;
+    z-index: 6;
     position: relative;
 }
 
 /*progress bars*/
 .about-vision-progress-bar-one {
     position: fixed;
-    bottom: 4rem;
+    bottom: 2rem;
     left: 10rem;
     width: 0.7rem;
     z-index: -2;
@@ -526,7 +535,7 @@
 
 .about-vision-progress-bar-two {
     position: fixed;
-    bottom: 3rem;
+    bottom: 1rem;
     left: 11.4rem;
     width: 0.7rem;
     z-index: -2;
@@ -534,7 +543,7 @@
 
 .about-vision-progress-bar-three {
     position: fixed;
-    bottom: 4rem;
+    bottom: 2rem;
     left: 12.8rem;
     width: 0.7rem;
     z-index: -1;
