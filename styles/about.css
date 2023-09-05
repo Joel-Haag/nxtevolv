@@ -678,6 +678,14 @@
     z-index: 13;
 }
 
+
+.about-small-gap-before-more-image {
+    position: absolute;
+    width: 15rem;
+    top: 35rem;
+    left: 5rem;
+}
+
 .about-small-gap-before-more-section-img-one {
     transition: transform 0s; /* Disable the transition for scaling */
     margin-left: 10rem;
