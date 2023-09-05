@@ -1,6 +1,15 @@
 /*Main page container with repeating gif as background*/
 .about-page-container {
+    position: relative;
+}
 
+.about-page-container-overlay-blur {
+    position: absolute;
+    width: 99vw;
+    height: 50vh;
+    top: 60vh;
+    z-index: 5;
+    transition: transform linear;
 }
 
 /*Constant three blue dots created with css vertically placed at bottom left of screen*/
@@ -111,20 +120,14 @@
 /*adding image as overlay*/
 .about-about-section-overlay {
     position: absolute;
-    /*opacity: 0.5;*/
-    background-image: url(../public/about/Colourblur.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    width: 100%;
+    height: 50vh;
+    width: 99vw;
     z-index: -1;
 }
 
 
 .about-about-section-header {
-    margin-left: 8%;
+    margin-left: 4%;
     padding-top: 13rem;
     width: 50%;
 }
@@ -132,7 +135,7 @@
 .about-about-section-heading {
     text-align: center;
     opacity: 1;
-    font-size: 4rem;
+    font-size: 3rem;
     color: white;
 }
 
@@ -214,14 +217,9 @@
 
 /*adding image as overlay*/
 .about-gap-section-one-container-overlay {
-    position: absolute;
-    background-image: url(../public/about/Colourblur.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    width: 100%;
+       position: absolute;
+    height: 50vh;
+    width: 99vw;
     z-index: -1;
 }
 
@@ -275,14 +273,9 @@
 
 /*adding image as overlay*/
 .about-approach-section-overlay {
-    position: absolute;
-    background-image: url(../public/about/Colourblur.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    width: 100%;
+       position: absolute;
+    height: 50vh;
+    width: 99vw;
     z-index: -1;
 }
 
@@ -394,14 +387,9 @@
 
 /*adding image as overlay*/
 .about-gap-section-two-container-overlay {
-    position: absolute;
-    background-image: url(../public/about/Colourblur.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    width: 100%;
+       position: absolute;
+    height: 50vh;
+    width: 99vw;
     z-index: -1;
 }
 
@@ -438,7 +426,7 @@
     }
 
     .about-gap-two-pillar-two {
-             width: 0;
+        width: 0;
         height: 0;
         top: 0;
         left: 0;
@@ -447,7 +435,7 @@
     }
 
     .about-gap-one-pillar-one {
-            width: 0;
+        width: 0;
         height: 0;
         top: 0;
         left: 0;
@@ -456,7 +444,7 @@
     }
 
     .about-gap-one-pillar-two {
-             width: 0;
+        width: 0;
         height: 0;
         top: 0;
         left: 0;
@@ -465,7 +453,7 @@
     }
 
     .about-gap-one-pillar-three {
-            width: 0;
+        width: 0;
         height: 0;
         top: 0;
         left: 0;
@@ -474,7 +462,7 @@
     }
 
     .about-gap-one-pillar-four {
-             width: 0;
+        width: 0;
         height: 0;
         top: 0;
         left: 0;
@@ -498,14 +486,9 @@
 
 /*adding image as overlay*/
 .about-vision-section-overlay {
-    position: absolute;
-    background-image: url(../public/about/Colourblur.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    width: 100%;
+       position: absolute;
+    height: 50vh;
+    width: 99vw;
     z-index: -1;
 }
 
