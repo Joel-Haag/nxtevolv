@@ -8,6 +8,10 @@ import CustomCursor from "@/components/CustomCursor/CustomCursor";
 import {Container} from "react-bootstrap";
 import styles from '../../styles/Home.module.css'
 import {Parallax} from "react-scroll-parallax";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {
+    faArrowDown,
+} from "@fortawesome/free-solid-svg-icons";
 
 
 const titleText = ABeeZee({
@@ -59,47 +63,47 @@ export default function About() {
     }, [scrollPosition]);
 
     // Function to handle when an image enters the viewport
-const handleImageIntersection = (entries, observer) => {
-  entries.forEach((entry, index) => {
-    if (entry.isIntersecting) {
-      const imageRect = entry.target.getBoundingClientRect();
-      const scrollPositionRelativeToImage = window.innerHeight - imageRect.top;
+    const handleImageIntersection = (entries, observer) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                const imageRect = entry.target.getBoundingClientRect();
+                const scrollPositionRelativeToImage = window.innerHeight - imageRect.top;
 
-      // Check if the image is fully visible
-      if (scrollPositionRelativeToImage >= imageRect.height) {
-        const scaleFactor = 1 + scrollPositionRelativeToImage * 0.005;
+                // Check if the image is fully visible
+                if (scrollPositionRelativeToImage >= imageRect.height) {
+                    const scaleFactor = 1 + scrollPositionRelativeToImage * 0.005;
 
-        // Get the current margin-left as a number (remove 'px' and parse as float)
-        const currentMarginLeft = parseFloat(getComputedStyle(entry.target).marginLeft);
+                    // Get the current margin-left as a number (remove 'px' and parse as float)
+                    const currentMarginLeft = parseFloat(getComputedStyle(entry.target).marginLeft);
 
-        // Calculate the new margin-left based on the original margin, scaling factor, and scroll direction
-        const marginLeftIncrement = 0.2; // Adjust as needed for the increment in left margin
-        let newMarginLeft = currentMarginLeft;
+                    // Calculate the new margin-left based on the original margin, scaling factor, and scroll direction
+                    const marginLeftIncrement = 0.2; // Adjust as needed for the increment in left margin
+                    let newMarginLeft = currentMarginLeft;
 
-        if (scrollDirection === 'down') {
-          newMarginLeft += marginLeftIncrement;
-        } else if (scrollDirection === 'up') {
-          newMarginLeft -= marginLeftIncrement;
-        }
+                    if (scrollDirection === 'down') {
+                        newMarginLeft += marginLeftIncrement;
+                    } else if (scrollDirection === 'up') {
+                        newMarginLeft -= marginLeftIncrement;
+                    }
 
-        entry.target.style.transform = `scale(${scaleFactor})`;
-        entry.target.style.marginLeft = `${newMarginLeft}px`; // Apply the new left margin
+                    entry.target.style.transform = `scale(${scaleFactor})`;
+                    entry.target.style.marginLeft = `${newMarginLeft}px`; // Apply the new left margin
 
-        // Calculate opacity based on scroll position relative to the next div
-        const nextDiv = document.querySelector('.about-find-out-more-container'); // Replace '.next-div' with your selector
-        const nextDivRect = nextDiv.getBoundingClientRect();
-        const opacity = 1 - (scrollPositionRelativeToImage / nextDivRect.top);
-        entry.target.style.opacity = opacity;
+                    // Calculate opacity based on scroll position relative to the next div
+                    const nextDiv = document.querySelector('.about-find-out-more-container'); // Replace '.next-div' with your selector
+                    const nextDivRect = nextDiv.getBoundingClientRect();
+                    const opacity = 1 - (scrollPositionRelativeToImage / nextDivRect.top);
+                    entry.target.style.opacity = opacity;
 
-        observer.unobserve(entry.target);
-      }
-    } else {
-      // Reset the margin and opacity to their original CSS values
-      entry.target.style.marginLeft = ''; // Remove the custom margin-left
-      entry.target.style.opacity = ''; // Remove the custom opacity
-    }
-  });
-};
+                    observer.unobserve(entry.target);
+                }
+            } else {
+                // Reset the margin and opacity to their original CSS values
+                entry.target.style.marginLeft = ''; // Remove the custom margin-left
+                entry.target.style.opacity = ''; // Remove the custom opacity
+            }
+        });
+    };
 
     // Set up the Intersection Observer for each image
     useEffect(() => {
@@ -415,6 +419,31 @@ const handleImageIntersection = (entries, observer) => {
                         <div className={"about-find-out-more-text"}>
                             <p className={`about-find-out-more-paragraph ${titleText.className}`}>
                                 Keep your company in the loop let Nxt Evolv Media make your vision reality!
+                            </p>
+                        </div>
+                        <div className={"about-find-horizontal-container"}>
+                            <div className={"about-find-dots-container"}>
+                                <div className={"about-find-horizontal-dot"}></div>
+                                <div className={"about-find-horizontal-dot"}></div>
+                                <div className={"about-find-horizontal-dot"}></div>
+                            </div>
+                            <div className={"about-find-text"}>
+                                <p className={`about-find-text-paragraph ${titleText.className}`}>
+                                    Find out more
+                                </p>
+                                {/*    Arrow icon now point down from font awesome*/}
+                                <div className="about-find-arrow-container">
+                                    <FontAwesomeIcon
+                                        icon={faArrowDown}
+                                        style={{fontSize: 40, color: "teal"}}
+                                    />
+                                </div>
+
+                            </div>
+                        </div>
+                        <div className={"about-find-out-more-email-container"}>
+                            <p className={`about-find-out-more-email-paragraph ${titleText.className}`}>
+                                info@nxtevolvmedia.co.za
                             </p>
                         </div>
 

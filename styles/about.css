@@ -773,3 +773,59 @@
     font-size: 1.3rem;
     color: white;
 }
+
+.about-find-horizontal-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5rem;
+}
+
+.about-find-dots-container {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+
+.about-find-horizontal-dot {
+    width: 2.3rem;
+    height: 2.3rem;
+    background-color: #49ccfc;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.about-find-text {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+
+.about-find-text-paragraph {
+    text-align: end;
+    font-size: 1.3rem;
+    color: white;
+}
+
+.arrow-container {
+    text-align: center;
+    font-size: 2rem; /* Adjust the size as needed */
+    color: #333; /* Adjust the color as needed */
+}
+
+.about-find-arrow-container {
+    margin-left: 2rem;
+}
+
+.about-find-out-more-email-container {
+    margin-right: 0;
+    margin-left: auto;
+    display: flex;
+    width: 50%;
+    margin-top: 5rem;
+}
+
+.about-find-out-more-email-paragraph {
+    text-align: end;
+    font-size: 1.3rem;
+    color: white;
+}

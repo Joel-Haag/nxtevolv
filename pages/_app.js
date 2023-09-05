@@ -6,6 +6,10 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import {useEffect} from "react";
 import {ParallaxProvider} from "react-scroll-parallax";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
+
 
 export default function App({Component, pageProps}) {
 
