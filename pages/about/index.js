@@ -59,32 +59,47 @@ export default function About() {
     }, [scrollPosition]);
 
     // Function to handle when an image enters the viewport
-    const handleImageIntersection = (entries, observer) => {
-        entries.forEach((entry, index) => {
-            if (entry.isIntersecting) {
-                const imageRect = entry.target.getBoundingClientRect();
-                const scrollPositionRelativeToImage = window.innerHeight - imageRect.top;
+const handleImageIntersection = (entries, observer) => {
+  entries.forEach((entry, index) => {
+    if (entry.isIntersecting) {
+      const imageRect = entry.target.getBoundingClientRect();
+      const scrollPositionRelativeToImage = window.innerHeight - imageRect.top;
 
-                // Check if the image is fully visible
-                if (scrollPositionRelativeToImage >= imageRect.height) {
-                    let scaleFactor = 1 + scrollPositionRelativeToImage * 0.005;
+      // Check if the image is fully visible
+      if (scrollPositionRelativeToImage >= imageRect.height) {
+        const scaleFactor = 1 + scrollPositionRelativeToImage * 0.005;
 
-                    // Limit the maximum scale factor to a certain value (e.g., 1.5)
-                    const maxScaleFactor = 4;
-                    if (scaleFactor > maxScaleFactor) {
-                        scaleFactor = maxScaleFactor;
-                    }
+        // Get the current margin-left as a number (remove 'px' and parse as float)
+        const currentMarginLeft = parseFloat(getComputedStyle(entry.target).marginLeft);
 
-                    entry.target.style.transform = `scale(${scaleFactor})`;
+        // Calculate the new margin-left based on the original margin, scaling factor, and scroll direction
+        const marginLeftIncrement = 0.2; // Adjust as needed for the increment in left margin
+        let newMarginLeft = currentMarginLeft;
 
-                    observer.unobserve(entry.target);
-                }
-            } else {
-                entry.target.style.transform = 'scale(1)';
-            }
-        });
-    };
+        if (scrollDirection === 'down') {
+          newMarginLeft += marginLeftIncrement;
+        } else if (scrollDirection === 'up') {
+          newMarginLeft -= marginLeftIncrement;
+        }
 
+        entry.target.style.transform = `scale(${scaleFactor})`;
+        entry.target.style.marginLeft = `${newMarginLeft}px`; // Apply the new left margin
+
+        // Calculate opacity based on scroll position relative to the next div
+        const nextDiv = document.querySelector('.about-find-out-more-container'); // Replace '.next-div' with your selector
+        const nextDivRect = nextDiv.getBoundingClientRect();
+        const opacity = 1 - (scrollPositionRelativeToImage / nextDivRect.top);
+        entry.target.style.opacity = opacity;
+
+        observer.unobserve(entry.target);
+      }
+    } else {
+      // Reset the margin and opacity to their original CSS values
+      entry.target.style.marginLeft = ''; // Remove the custom margin-left
+      entry.target.style.opacity = ''; // Remove the custom opacity
+    }
+  });
+};
 
     // Set up the Intersection Observer for each image
     useEffect(() => {
@@ -353,38 +368,30 @@ export default function About() {
 
                 {/*small gap before more section*/}
                 <div className={"about-small-gap-before-more-section-container "}>
-                    <Parallax speed={-60}>
-                        <img className={"about-small-gap-before-more-image"}
+                    <Parallax speed={-50}>
+                        <img className={"about-small-gap-before-more-section-img-one "}
                              ref={imageRefs.image1}
-                             src={"/logos/logo.gif"}/>
+                             src={"/about/bottomProgressUp.png"}
+                             alt="Your GIF"/>
                     </Parallax>
-
-                    {/*<div ref={imageRefs.image1}>*/}
-                    {/*    <Parallax speed={-50}>*/}
-                    {/*        <img className={"about-small-gap-before-more-section-img-one "}*/}
-                    {/*            // ref={imageRefs.image1}*/}
-                    {/*             src={"/about/bottomProgressUp.png"}*/}
-                    {/*             alt="Your GIF"/>*/}
-                    {/*    </Parallax>*/}
-                    {/*    <Parallax speed={-50}>*/}
-                    {/*        <img className={"about-small-gap-before-more-section-img-two"}*/}
-                    {/*             src={"/about/bottomProgressUp.png"}*/}
-                    {/*            // ref={imageRefs.image2}*/}
-                    {/*             alt="Your GIF"/>*/}
-                    {/*    </Parallax>*/}
-                    {/*    <Parallax speed={-50}>*/}
-                    {/*        <img className={"about-small-gap-before-more-section-img-three"}*/}
-                    {/*             src={"/about/bottomProgressDown.png"}*/}
-                    {/*            // ref={imageRefs.image3}*/}
-                    {/*             alt="Your GIF"/>*/}
-                    {/*    </Parallax>*/}
-                    {/*    <Parallax speed={-50}>*/}
-                    {/*        <img className={"about-small-gap-before-more-section-img-four"}*/}
-                    {/*             src={"/about/bottomProgressInvisibleDown.png"}*/}
-                    {/*            // ref={imageRefs.image4}*/}
-                    {/*             alt="Your GIF"/>*/}
-                    {/*    </Parallax>*/}
-                    {/*</div>*/}
+                    <Parallax speed={-50}>
+                        <img className={"about-small-gap-before-more-section-img-two"}
+                             src={"/about/bottomProgressUp.png"}
+                             ref={imageRefs.image2}
+                             alt="Your GIF"/>
+                    </Parallax>
+                    <Parallax speed={-50}>
+                        <img className={"about-small-gap-before-more-section-img-three"}
+                             src={"/about/bottomProgressDown.png"}
+                             ref={imageRefs.image3}
+                             alt="Your GIF"/>
+                    </Parallax>
+                    <Parallax speed={-50}>
+                        <img className={"about-small-gap-before-more-section-img-four"}
+                             src={"/about/bottomProgressInvisibleDown.png"}
+                             ref={imageRefs.image4}
+                             alt="Your GIF"/>
+                    </Parallax>
                 </div>
 
 
@@ -396,7 +403,7 @@ export default function About() {
                     <div className={"about-find-out-more-logo"} data-aos="zoom-in-up" data-aos-duration="5000"
                          data-aos-easing="linear" data-aos-offset="300">
 
-                        {/*<img src={"/logos/logo.gif"} alt="Your GIF" className={"about-find-out-more-logo-image"}/>*/}
+                        <img src={"/logos/logo.gif"} alt="Your GIF" className={"about-find-out-more-logo-image"}/>
 
                     </div>
                     <div className={"about-find-out-more-content"}>
