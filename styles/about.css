@@ -8,7 +8,7 @@
     width: 99vw;
     height: 50vh;
     top: 60vh;
-    z-index: 5;
+    z-index: 10;
     transition: transform linear;
 }
 
@@ -47,7 +47,8 @@
     background-position: center;
     height: 100vh;
     width: 100%;
-    z-index: 2;
+
+    z-index: 10;
 
 }
 
@@ -76,7 +77,7 @@
 
 /*About content in place*/
 .about-about-content-placing {
-    z-index: 1;
+    z-index: 9;
     position: relative;
 }
 
@@ -104,7 +105,18 @@
     height: 15rem;
 }
 
+/*about about progress bar*/
+.about-about-progress-bar {
+    position: fixed;
+    bottom: 4rem;
+    left: 10rem;
+    width: 0.7rem;
+    z-index: 1;
+}
+
 /*About about section */
+
+
 .about-about-section-container {
     position: relative;
     background-image: url(../public/about/cloudsDark.gif);
@@ -217,7 +229,7 @@
 
 /*adding image as overlay*/
 .about-gap-section-one-container-overlay {
-       position: absolute;
+    position: absolute;
     height: 50vh;
     width: 99vw;
     z-index: -1;
@@ -259,6 +271,29 @@
 
 
 /*approach section*/
+/*content placement*/
+.about-approach-content-placing {
+    z-index: 7;
+    position: relative;
+}
+
+/*about approach progress bar*/
+.about-approach-progress-bar-one {
+    position: fixed;
+    bottom: 4rem;
+    left: 10rem;
+    width: 0.7rem;
+    z-index: 11 !important;
+}
+
+.about-approach-progress-bar-two {
+    position: fixed;
+    bottom: 3rem;
+    left: 11.4rem;
+    width: 0.7rem;
+    z-index: 1;
+}
+
 .about-approach-section-container {
     position: relative;
     background-image: url(../public/about/cloudsDark.gif);
@@ -273,7 +308,7 @@
 
 /*adding image as overlay*/
 .about-approach-section-overlay {
-       position: absolute;
+    position: absolute;
     height: 50vh;
     width: 99vw;
     z-index: -1;
@@ -387,7 +422,7 @@
 
 /*adding image as overlay*/
 .about-gap-section-two-container-overlay {
-       position: absolute;
+    position: absolute;
     height: 50vh;
     width: 99vw;
     z-index: -1;
@@ -411,6 +446,7 @@
     top: 0rem;
     width: 50rem;
     transform: scaleX(-1);
+    z-index: -1;
 }
 
 
@@ -472,6 +508,38 @@
 }
 
 /*Vision section*/
+
+/*about-vision-content-placing*/
+.about-vision-content-placing {
+    z-index: 7;
+    position: relative;
+}
+
+/*progress bars*/
+.about-vision-progress-bar-one {
+    position: fixed;
+    bottom: 4rem;
+    left: 10rem;
+    width: 0.7rem;
+    z-index: -2;
+}
+
+.about-vision-progress-bar-two {
+    position: fixed;
+    bottom: 3rem;
+    left: 11.4rem;
+    width: 0.7rem;
+    z-index: -2;
+}
+
+.about-vision-progress-bar-three {
+    position: fixed;
+    bottom: 4rem;
+    left: 12.8rem;
+    width: 0.7rem;
+    z-index: -1;
+}
+
 .about-vision-section-container {
     position: relative;
     background-image: url(../public/about/cloudsDark.gif);
@@ -486,7 +554,7 @@
 
 /*adding image as overlay*/
 .about-vision-section-overlay {
-       position: absolute;
+    position: absolute;
     height: 50vh;
     width: 99vw;
     z-index: -1;

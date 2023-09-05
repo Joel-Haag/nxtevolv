@@ -116,6 +116,7 @@ export default function About() {
 
             {/*ABOUT SECTION*/}
             <div className={"about-about-content-placing"}>
+                <img className={"about-about-progress-bar"} src={"/about/bottomProgressUp.png"} alt="Your GIF"/>
                 <div className={"about-circle-container"}>
                     <img src={"/about/circle.png"} alt="Your GIF" className={"about-circle-img"}/>
                 </div>
@@ -184,7 +185,11 @@ export default function About() {
 
 
             {/*APPROACH SECTION*/}
-            <div className={"about-about-content-placing"}>
+            <div className={"about-approach-content-placing"}>
+                <img className={"about-approach-progress-bar-one"} src={"/about/bottomProgressInvisible.png"}
+                     alt="Your GIF"/>
+                {/*<img className={"about-approach-progress-bar-two"} src={"/about/bottomProgressUp.png"} alt="Your GIF"/>*/}
+
                 <div className={"about-approach-section-container"}>
                     <img src={"about/Colourblur.png"} alt="Your GIF"
                          className={"about-approach-section-overlay"}/>
@@ -240,26 +245,36 @@ export default function About() {
 
 
             {/*VISION SECTION*/}
-            <div className={"about-vision-section-container"}>
-                <img src={"about/Colourblur.png"} alt="Your GIF"
-                     className={"about-vision-section-overlay"}/>
-                <div className={"about-vision-section-content"}>
-                    <div className={"about-vision-section-header"}>
-                        <h1 className={`about-vision-section-heading ${roboto.className}`}>
-                            WHAT'S THE
-                        </h1>
-                        <h1 className={`about-vision-section-heading ${roboto.className}`}><span
-                            className={"about-vision-section-heading-blue"}> VISION</span></h1>
-                    </div>
-                    <div className={"about-vision-section-text"}>
-                        <p className={`about-vision-section-paragraph-one ${titleText.className}`}>
-                            Our vision at Nxt Evolv Media is created around our client's needs and how we can help them
-                            achieve their business objectives! Making sure that when a client is dealing with Nxt Evolv
-                            Media they will always be winning and ahead of the competition.
-                        </p>
-                        <p className={`about-vision-section-paragraph-two ${titleText.className}`}>
-                            Our primary focus is our client's ROI, digital presence and brand.
-                        </p>
+            <div className={"about-vision-content-placing"}>
+                    {/*<img className={"about-vision-progress-bar-one"} src={"/about/bottomProgressInvisible.png"}*/}
+                    {/*     alt="Your GIF"/>*/}
+                    {/*<img className={"about-vision-progress-bar-two"} src={"/about/bottomProgressInvisible.png"}*/}
+                    {/*     alt="Your GIF"/>*/}
+                    {/*<img className={"about-vision-progress-bar-three"} src={"/about/bottomProgressDown.png"}*/}
+                    {/*     alt="Your GIF"/>*/}
+                    {/*<img src={"about/Colourblur.png"} alt="Your GIF"*/}
+                    {/*     className={"about-vision-section-overlay"}/>*/}
+                <div className={"about-vision-section-container"}>
+                    <div className={"about-vision-section-content"}>
+                        <div className={"about-vision-section-header"}>
+                            <h1 className={`about-vision-section-heading ${roboto.className}`}>
+                                WHAT'S THE
+                            </h1>
+                            <h1 className={`about-vision-section-heading ${roboto.className}`}><span
+                                className={"about-vision-section-heading-blue"}> VISION</span></h1>
+                        </div>
+                        <div className={"about-vision-section-text"}>
+                            <p className={`about-vision-section-paragraph-one ${titleText.className}`}>
+                                Our vision at Nxt Evolv Media is created around our client's needs and how we can help
+                                them
+                                achieve their business objectives! Making sure that when a client is dealing with Nxt
+                                Evolv
+                                Media they will always be winning and ahead of the competition.
+                            </p>
+                            <p className={`about-vision-section-paragraph-two ${titleText.className}`}>
+                                Our primary focus is our client's ROI, digital presence and brand.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
