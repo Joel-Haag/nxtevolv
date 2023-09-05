@@ -171,7 +171,7 @@ export default function About() {
                             <img src={"/about/LogoSinglePillar_1.png"} alt="Your GIF"
                                  className={"about-gap-one-pillar-one"}/>
                         </Parallax>
-                        <Parallax speed={-20}>
+                        <Parallax speed={-10}>
                             <img src={"/backgroundPillar/pillar1.png"} alt="Your GIF"
                                  className={"about-gap-one-pillar-two"}/>
                         </Parallax>
@@ -242,11 +242,11 @@ export default function About() {
                     <img src={"about/Colourblur.png"} alt="Your GIF"
                          className={"about-gap-section-two-container-overlay"}/>
                     <div className={"about-gap-two-pillars-container"}>
-                        <Parallax speed={20}>
+                        <Parallax speed={30}>
                             <img src={"/about/LogoSinglePillar_1.png"} alt="Your GIF"
                                  className={"about-gap-two-pillar-one"}/>
                         </Parallax>
-                        <Parallax speed={-20}>
+                        <Parallax speed={-10}>
                             <img src={"/backgroundPillar/pillar1.png"} alt="Your GIF"
                                  className={"about-gap-two-pillar-two"}/>
                         </Parallax>
