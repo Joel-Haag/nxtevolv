@@ -237,7 +237,7 @@ export default function About() {
                          alt="Your GIF"/>
                     <img className={"about-approach-progress-bar-two"} src={"/about/bottomProgressUp.png"}
                          alt="Your GIF"/>
-                         <img className={"about-vision-progress-bar-three"} src={"/about/bottomProgressInvisible.png"}
+                         <img className={"about-vision-progress-bar-three"} src={"/about/bottomProgressInvisibleDown.png"}
                          alt="Your GIF"/>
                     <img src={"about/Colourblur.png"} alt="Your GIF"
                          className={"about-gap-section-two-container-overlay"}/>
