@@ -63,47 +63,97 @@ export default function About() {
     }, [scrollPosition]);
 
     // Function to handle when an image enters the viewport
-    const handleImageIntersection = (entries, observer) => {
-        entries.forEach((entry, index) => {
-            if (entry.isIntersecting) {
-                const imageRect = entry.target.getBoundingClientRect();
-                const scrollPositionRelativeToImage = window.innerHeight - imageRect.top;
+    let lastTimestamp;
 
-                // Check if the image is fully visible
-                if (scrollPositionRelativeToImage >= imageRect.height) {
-                    const scaleFactor = 1 + scrollPositionRelativeToImage * 0.005;
+const handleImageIntersection = (entries, observer) => {
+    entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+            const imageRect = entry.target.getBoundingClientRect();
+            const scrollPositionRelativeToImage = window.innerHeight - imageRect.top;
+
+            if (scrollPositionRelativeToImage >= imageRect.height) {
+                const scaleFactor = 1 + scrollPositionRelativeToImage * 0.005;
+
+                if (lastTimestamp) {
+                    const timestamp = performance.now();
+                    const timeElapsed = timestamp - lastTimestamp;
+                    const marginIncrement = 0.2 * (timeElapsed / 16); // Adjust 16 for a desired frame rate
 
                     // Get the current margin-left as a number (remove 'px' and parse as float)
                     const currentMarginLeft = parseFloat(getComputedStyle(entry.target).marginLeft);
 
-                    // Calculate the new margin-left based on the original margin, scaling factor, and scroll direction
-                    const marginLeftIncrement = 0.2; // Adjust as needed for the increment in left margin
+                    // Calculate the new margin-left based on the scroll direction
                     let newMarginLeft = currentMarginLeft;
 
                     if (scrollDirection === 'down') {
-                        newMarginLeft += marginLeftIncrement;
+                        newMarginLeft += marginIncrement + 0.3;
                     } else if (scrollDirection === 'up') {
-                        newMarginLeft -= marginLeftIncrement;
+                        newMarginLeft -= marginIncrement + 0.3;
                     }
 
                     entry.target.style.transform = `scale(${scaleFactor})`;
-                    entry.target.style.marginLeft = `${newMarginLeft}px`; // Apply the new left margin
+                    entry.target.style.marginLeft = `${newMarginLeft}px`;
 
-                    // Calculate opacity based on scroll position relative to the next div
-                    const nextDiv = document.querySelector('.about-find-out-more-container'); // Replace '.next-div' with your selector
+                    const nextDiv = document.querySelector('.about-find-out-more-container');
                     const nextDivRect = nextDiv.getBoundingClientRect();
                     const opacity = 1 - (scrollPositionRelativeToImage / nextDivRect.top);
                     entry.target.style.opacity = opacity;
 
                     observer.unobserve(entry.target);
                 }
-            } else {
-                // Reset the margin and opacity to their original CSS values
-                entry.target.style.marginLeft = ''; // Remove the custom margin-left
-                entry.target.style.opacity = ''; // Remove the custom opacity
+
+                lastTimestamp = performance.now();
             }
-        });
-    };
+        } else {
+            entry.target.style.marginLeft = '';
+            entry.target.style.opacity = '';
+        }
+    });
+};
+
+
+
+    // const handleImageIntersection = (entries, observer) => {
+    //     entries.forEach((entry, index) => {
+    //         if (entry.isIntersecting) {
+    //             const imageRect = entry.target.getBoundingClientRect();
+    //             const scrollPositionRelativeToImage = window.innerHeight - imageRect.top;
+    //
+    //             // Check if the image is fully visible
+    //             if (scrollPositionRelativeToImage >= imageRect.height) {
+    //                 const scaleFactor = 1 + scrollPositionRelativeToImage * 0.005;
+    //
+    //                 // Get the current margin-left as a number (remove 'px' and parse as float)
+    //                 const currentMarginLeft = parseFloat(getComputedStyle(entry.target).marginLeft);
+    //
+    //                 // Calculate the new margin-left based on the original margin, scaling factor, and scroll direction
+    //                 const marginLeftIncrement = 0.25; // Adjust as needed for the increment in left margin
+    //                 let newMarginLeft = currentMarginLeft;
+    //
+    //                 if (scrollDirection === 'down') {
+    //                     newMarginLeft += marginLeftIncrement;
+    //                 } else if (scrollDirection === 'up') {
+    //                     newMarginLeft -= marginLeftIncrement;
+    //                 }
+    //
+    //                 entry.target.style.transform = `scale(${scaleFactor})`;
+    //                 entry.target.style.marginLeft = `${newMarginLeft}px`; // Apply the new left margin
+    //
+    //                 // Calculate opacity based on scroll position relative to the next div
+    //                 const nextDiv = document.querySelector('.about-find-out-more-container'); // Replace '.next-div' with your selector
+    //                 const nextDivRect = nextDiv.getBoundingClientRect();
+    //                 const opacity = 1 - (scrollPositionRelativeToImage / nextDivRect.top);
+    //                 entry.target.style.opacity = opacity;
+    //
+    //                 observer.unobserve(entry.target);
+    //             }
+    //         } else {
+    //             // Reset the margin and opacity to their original CSS values
+    //             entry.target.style.marginLeft = ''; // Remove the custom margin-left
+    //             entry.target.style.opacity = ''; // Remove the custom opacity
+    //         }
+    //     });
+    // };
 
     // Set up the Intersection Observer for each image
     useEffect(() => {
