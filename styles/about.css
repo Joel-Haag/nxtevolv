@@ -1,6 +1,7 @@
 /*Main page container with repeating gif as background*/
 .about-page-container {
     position: relative;
+    z-index: 0;
 }
 
 .about-page-container-overlay-blur {
@@ -15,7 +16,7 @@
 /*Constant three blue dots created with css vertically placed at bottom left of screen*/
 @media screen and (min-width: 768px) {
     .about-page-dot {
-        z-index: 100;
+        z-index: 11;
         content: "";
         position: fixed;
         bottom: 4rem;
@@ -82,25 +83,27 @@
 }
 
 .about-circle-container {
-    z-index: 100;
+    z-index: 4;
     position: fixed;
     top: 2.5rem;
     left: 12rem;
 }
 
 .about-circle-img {
+    z-index: 4;
     width: 10rem;
     height: 10rem;
 }
 
 .about-x-container {
-    z-index: 100;
+    z-index: 4;
     position: fixed;
     top: 15rem;
     left: 5rem;
 }
 
 .about-x-img {
+    z-index: 4;
     width: 15rem;
     height: 15rem;
 }
@@ -116,7 +119,7 @@
 }
 
 .about-about-progress-bar-two {
-        position: fixed;
+    position: fixed;
     bottom: 1rem;
     left: 11.5rem;
     z-index: 30;
@@ -659,4 +662,106 @@
         color: #ffffff;
         font-size: 1.3rem;
     }
+}
+
+/*small gap before find out more*/
+.about-small-gap-before-more-section-container {
+    display: flex;
+    position: relative;
+    background-image: url(../public/about/cloudsDark.gif);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    z-index: 13;
+}
+
+.about-small-gap-before-more-section-img-one {
+    transition: transform 0s; /* Disable the transition for scaling */
+    margin-left: 10rem;
+    margin-top: 28rem;
+    width: 0.7rem;
+}
+
+.about-small-gap-before-more-section-img-two {
+    transition: transform 0s; /* Disable the transition for scaling */
+    margin-left: 0.7rem;
+    margin-top: 29rem;
+    width: 0.7rem;
+}
+
+.about-small-gap-before-more-section-img-three {
+    transition: transform 0s; /* Disable the transition for scaling */
+    margin-left: 0.7rem;
+    margin-top: 28rem;
+    width: 0.7rem;
+}
+
+.about-small-gap-before-more-section-img-four {
+    transition: transform 0s; /* Disable the transition for scaling */
+    margin-left: 0.7rem;
+    margin-top: 29rem;
+    width: 0.7rem;
+}
+
+
+/*Find out more css*/
+.about-find-out-more-container {
+    display: flex;
+    position: relative;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    z-index: 12;
+}
+
+.about-more-section-overlay {
+    position: absolute;
+    height: 100vh;
+    width: 99vw;
+    z-index: -1;
+}
+
+.about-find-out-more-logo {
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
+
+.about-find-out-more-logo-image {
+    position: absolute;
+    left: -8rem;
+    width: 54rem;
+}
+
+.about-find-out-more-content {
+    width: 50%;
+    margin-top: 15rem;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.about-find-out-more-header {
+    margin-bottom: 0;
+    padding-bottom: 5rem;
+}
+
+.about-find-out-more-heading {
+    font-size: 5rem;
+    color: #49ccfc;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.about-find-out-more-text {
+    width: 70%;
+    font-size: 1.3rem;
+    color: white;
 }
