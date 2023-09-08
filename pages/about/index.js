@@ -468,32 +468,32 @@ const handleImageIntersection = (entries, observer) => {
                 </div>
 
                 {/*small gap before more section*/}
-                <div className={"about-small-gap-before-more-section-container "}>
-                    <Parallax speed={-50}>
-                        <img className={"about-small-gap-before-more-section-img-one "}
-                             ref={imageRefs.image1}
-                             src={"/about/bottomProgressUp.png"}
-                             alt="Your GIF"/>
-                    </Parallax>
-                    <Parallax speed={-50}>
-                        <img className={"about-small-gap-before-more-section-img-two"}
-                             src={"/about/bottomProgressUp.png"}
-                             ref={imageRefs.image2}
-                             alt="Your GIF"/>
-                    </Parallax>
-                    <Parallax speed={-50}>
-                        <img className={"about-small-gap-before-more-section-img-three"}
-                             src={"/about/bottomProgressDown.png"}
-                             ref={imageRefs.image3}
-                             alt="Your GIF"/>
-                    </Parallax>
-                    <Parallax speed={-50}>
-                        <img className={"about-small-gap-before-more-section-img-four"}
-                             src={"/about/bottomProgressInvisibleDown.png"}
-                             ref={imageRefs.image4}
-                             alt="Your GIF"/>
-                    </Parallax>
-                </div>
+                {/*<div className={"about-small-gap-before-more-section-container "}>*/}
+                {/*    <Parallax speed={-50}>*/}
+                {/*        <img className={"about-small-gap-before-more-section-img-one "}*/}
+                {/*             ref={imageRefs.image1}*/}
+                {/*             src={"/about/bottomProgressUp.png"}*/}
+                {/*             alt="Your GIF"/>*/}
+                {/*    </Parallax>*/}
+                {/*    <Parallax speed={-50}>*/}
+                {/*        <img className={"about-small-gap-before-more-section-img-two"}*/}
+                {/*             src={"/about/bottomProgressUp.png"}*/}
+                {/*             ref={imageRefs.image2}*/}
+                {/*             alt="Your GIF"/>*/}
+                {/*    </Parallax>*/}
+                {/*    <Parallax speed={-50}>*/}
+                {/*        <img className={"about-small-gap-before-more-section-img-three"}*/}
+                {/*             src={"/about/bottomProgressDown.png"}*/}
+                {/*             ref={imageRefs.image3}*/}
+                {/*             alt="Your GIF"/>*/}
+                {/*    </Parallax>*/}
+                {/*    <Parallax speed={-50}>*/}
+                {/*        <img className={"about-small-gap-before-more-section-img-four"}*/}
+                {/*             src={"/about/bottomProgressInvisibleDown.png"}*/}
+                {/*             ref={imageRefs.image4}*/}
+                {/*             alt="Your GIF"/>*/}
+                {/*    </Parallax>*/}
+                {/*</div>*/}
 
 
                 {/*    FIND OUT MORE SECTION */}

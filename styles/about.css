@@ -64,6 +64,7 @@
 
 }
 
+
 .about-page-x-container {
     position: fixed;
     bottom: 2rem;
@@ -81,6 +82,23 @@
 }
 .about-page-x-img{
         /*transform: rotate(45deg);*/
+}
+
+/*media queries for x container*/
+@media screen and (max-width: 768px) {
+    .about-page-x-container {
+        width: 0rem;
+    }
+
+    .about-page-x-container-row-one {
+           width: 0rem;
+    }
+    .about-page-x-container-row-two {
+           width: 0rem;
+    }
+    .about-page-x-img{
+           width: 0rem;
+    }
 }
 
 .about-header-content {
@@ -505,26 +523,23 @@
 /*media queries for pillars*/
 @media screen and (max-width: 768px) {
     .about-gap-two-pillar-one {
-        width: 0;
-        height: 0;
-        top: 0;
+           width: 10rem;
+        height: 10rem;
+        top: 12rem;
         left: 0;
         right: 0;
-        bottom: 0;
     }
 
     .about-gap-two-pillar-two {
-        width: 0;
-        height: 0;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+       width: 10rem;
+        height: 10rem;
+        top: 16rem;
+        right: 50rem;
     }
 
     .about-gap-one-pillar-one {
-        width: 0;
-        height: 0;
+        width: 10rem;
+        height: 10rem;
         top: 0;
         left: 0;
         right: 0;
@@ -532,29 +547,25 @@
     }
 
     .about-gap-one-pillar-two {
-        width: 0;
-        height: 0;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+        width: 10rem;
+        height: 10rem;
+        left: 25%;
+        top: 8rem;
     }
 
     .about-gap-one-pillar-three {
-        width: 0;
-        height: 0;
+        width: 10rem;
+        height: 10rem;
         top: 0;
-        left: 0;
-        right: 0;
+        right: 50rem;
         bottom: 0;
     }
 
     .about-gap-one-pillar-four {
-        width: 0;
-        height: 0;
+         width: 0rem;
+        height: 0rem;
         top: 0;
-        left: 0;
-        right: 0;
+        right: 0rem;
         bottom: 0;
     }
 }
@@ -708,6 +719,8 @@
 
 /*small gap before find out more*/
 .about-small-gap-before-more-section-container {
+        border: solid red;
+
     display: flex;
     position: relative;
     background-image: url(../public/about/cloudsDark.gif);
@@ -874,4 +887,111 @@
     text-align: end;
     font-size: 1.3rem;
     color: white;
+}
+
+
+/*Media queries for about find more*/
+@media screen and (max-width: 768px) {
+    .about-find-out-more-container {
+        height: 100%;
+    }
+
+    .about-more-section-overlay {
+        height: 100%;
+    }
+
+    .about-find-out-more-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .about-find-out-more-logo-image {
+        position: absolute;
+        left: -8rem;
+        width: 0rem;
+    }
+
+    .about-find-out-more-content {
+        width: 100%;
+        margin-top: 15rem;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .about-find-out-more-header {
+        margin-bottom: 0;
+        padding-bottom: 5rem;
+    }
+
+    .about-find-out-more-heading {
+        font-size: 5rem;
+        color: #49ccfc;
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .about-find-out-more-text {
+        width: 100%;
+        font-size: 1.3rem;
+        color: white;
+    }
+
+    .about-find-horizontal-container {
+        display: flex;
+        flex-direction: row;
+        margin-top: 5rem;
+    }
+
+    .about-find-dots-container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .about-find-horizontal-dot {
+        width: 2.3rem;
+        height: 2.3rem;
+        background-color: #49ccfc;
+        border-radius: 50%;
+        margin-right: 1rem;
+    }
+
+    .about-find-text {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .about-find-text-paragraph {
+        text-align: end;
+        font-size: 1.3rem;
+        color: white;
+    }
+
+    .arrow-container {
+        text-align: center;
+        font-size: 2rem; /* Adjust the size as needed */
+        color: #333; /* Adjust the color as needed */
+    }
+
+    .about-find-arrow-container {
+        margin-left: 2rem;
+    }
+
+    .about-find-out-more-email-container {
+        margin-right: 0;
+        margin-left: auto;
+        display: flex;
+        width: 100%;
+        margin-top: 5rem;
+    }
+
+    .about-find-out-more-email-paragraph {
+        text-align: end;
+        font-size: 1.3rem;
+        color: white;
+    }
 }
