@@ -2,13 +2,13 @@ import styles from '../styles/Home.module.css'
 import Logo from "@/components/logo/logo";
 
 import {Canvas} from "@react-three/fiber"
-import {useState, useEffect, useRef} from 'react';
-import {Container, Row, Col, Card, Carousel} from "react-bootstrap";
+import {useEffect, useRef, useState} from 'react';
+import {Col, Container, Row} from "react-bootstrap";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 
 
-import {Orbitron, ABeeZee} from 'next/font/google'
+import {ABeeZee, Orbitron} from 'next/font/google'
 import CustomCursor from "@/components/CustomCursor/CustomCursor";
 import Link from "next/link";
 
@@ -200,8 +200,8 @@ export default function Home() {
                     )}
                     {!logoVisible && (
                         <div className={styles.ImageLightContainer}
-                             // style={{"--scroll-position": `${-scrollPosition}px`, transform: `scale(${groundScale})`}}>
-                            >
+                            // style={{"--scroll-position": `${-scrollPosition}px`, transform: `scale(${groundScale})`}}>
+                        >
                             <div className={styles.groundImageContainer}
                                  style={{"--scroll-position": `${-scrollPosition}px`}}>
                                 <img src="/piles/Pile_1.png"

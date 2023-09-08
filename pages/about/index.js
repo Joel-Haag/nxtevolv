@@ -29,6 +29,7 @@ export default function About() {
     const [scrollDirection, setScrollDirection] = useState('none');
     const [scrollPosition, setScrollPosition] = useState(0);
     const [scrollY, setScrollY] = useState(0);
+  const [rotation, setRotation] = useState(0);
     const imageRefs = {
         image1: useRef(null),
         image2: useRef(null),
@@ -42,6 +43,11 @@ export default function About() {
             const currentScrollY = window.scrollY; // Get scroll position from the window
             setScrollPosition(currentScrollY);
             setScrollY(currentScrollY);
+
+            // Rotate the image based on scroll position
+            const rotateAngle = scrollY * 0.1;
+            setRotation(rotateAngle);
+
 
 
             // Check scroll direction
@@ -185,11 +191,32 @@ const handleImageIntersection = (entries, observer) => {
         <>
             <div className={"about-page-container"}>
 
+                {/*Blur effect*/}
+                {/*<Parallax speed={0}>*/}
+                     <img src={"about/Colourblur.png"} alt="Your GIF"
+                             className={"about-page-container-blur"}/>
+                {/*</Parallax>*/}
+
                 {/*3 dots*/}
                 <div className="about-page-dot"></div>
                 <div className="about-page-dot"></div>
                 <div className="about-page-dot"></div>
                 {/*end 3 dots*/}
+
+                {/* 6 X at bottom right*/}
+                <div className="about-page-x-container">
+                    <div className={"about-page-x-container-row-one"}>
+                        <img src={"/about/xPattern.png"} alt="Your GIF" className={"about-page-x-img"}   style={{ transform: `rotate(${rotation}deg)` }}
+/>
+                        <img src={"/about/xPattern.png"} alt="Your GIF" className={"about-page-x-img"} style={{ transform: `rotate(${rotation}deg)` }}/>
+                        <img src={"/about/xPattern.png"} alt="Your GIF" className={"about-page-x-img"} style={{ transform: `rotate(${rotation}deg)` }}/>
+                </div>
+                    <div className={"about-page-x-container-row-two"}>
+                        <img src={"/about/xPattern.png"} alt="Your GIF" className={"about-page-x-img"} style={{ transform: `rotate(${rotation}deg)` }}/>
+                        <img src={"/about/xPattern.png"} alt="Your GIF" className={"about-page-x-img"} style={{ transform: `rotate(${rotation}deg)` }}/>
+                        <img src={"/about/xPattern.png"} alt="Your GIF" className={"about-page-x-img"} style={{ transform: `rotate(${rotation}deg)` }}/>
+                    </div>
+                </div>
 
                 <CustomCursor/>
                 <Navbar
@@ -221,8 +248,8 @@ const handleImageIntersection = (entries, observer) => {
 
                 <div className={`about-header-container ${roboto.className}`}>
                     {/*Overlay effect with the blue*/}
-                    <img src={"about/Colourblur.png"} alt="Your GIF"
-                         className={"about-page-container-overlay-blur"}/>
+                    {/*<img src={"about/Colourblur.png"} alt="Your GIF"*/}
+                    {/*     className={"about-page-container-overlay-blur"}/>*/}
 
                     {/*end of overlay effect*/}
                     <div className={"about-header-content"}>
@@ -245,8 +272,10 @@ const handleImageIntersection = (entries, observer) => {
                         <img src={"/about/x.png"} alt="Your GIF" className={"about-x-img"}/>
                     </div>
                     <div className={"about-about-section-container"}>
-                        <img src={"about/Colourblur.png"} alt="Your GIF"
-                             className={"about-about-section-overlay"}/>
+                        {/*<img src={"about/Colourblur.png"} alt="Your GIF"*/}
+                        {/*     className={"about-about-section-overlay"}/>*/}
+                        {/*      <div*/}
+                        {/*          className={"about-about-section-overlay"}></div>*/}
 
                         <div className={"about-about-section-content"}>
                             <img className={"about-about-progress-bar"} src={"/about/bottomProgressUp.png"}
@@ -260,12 +289,15 @@ const handleImageIntersection = (entries, observer) => {
                                 <h1 className={`about-about-section-heading ${roboto.className}`}> ABOUT</h1>
                             </div>
                             <div className={"about-about-section-text"}>
-                                <p className={`about-about-section-paragraph-one ${titleText.className}`}>
+                                <Parallax speed={20}>
+                                <p className={`about-about-section-paragraph-one ${titleText.className}`} >
                                     Nxt Evolv Media is a digital marketing and media agency that prides itself in
                                     improving
                                     and
                                     building businesses!
                                 </p>
+                                </Parallax>
+                                               <Parallax speed={40}>
                                 <p className={`about-about-section-paragraph-two ${titleText.className}`}>
                                     Nxt Evolv Media provides assistance in achieving client's business objectives by
                                     boosting
@@ -278,6 +310,7 @@ const handleImageIntersection = (entries, observer) => {
                                     stronger
                                     brand awareness.
                                 </p>
+                                               </Parallax>
                             </div>
                         </div>
                     </div>
@@ -288,22 +321,22 @@ const handleImageIntersection = (entries, observer) => {
                              alt="Your GIF"/>
                         <img className={"about-about-progress-bar-two"} src={"/about/bottomProgressInvisible.png"}
                              alt="Your GIF"/>
-                        <img src={"about/Colourblur.png"} alt="Your GIF"
-                             className={"about-gap-section-one-container-overlay"}/>
+                        {/*<img src={"about/Colourblur.png"} alt="Your GIF"*/}
+                        {/*     className={"about-gap-section-one-container-overlay"}/>*/}
                         <div className={"about-gap-one-pillars-container"}>
-                            <Parallax speed={10}>
+                            <Parallax speed={60}>
                                 <img src={"/about/LogoSinglePillar_1.png"} alt="Your GIF"
                                      className={"about-gap-one-pillar-one"}/>
                             </Parallax>
-                            <Parallax speed={-10}>
+                            <Parallax speed={5}>
                                 <img src={"/backgroundPillar/pillar1.png"} alt="Your GIF"
                                      className={"about-gap-one-pillar-two"}/>
                             </Parallax>
-                            <Parallax speed={30}>
+                            <Parallax speed={25}>
                                 <img src={"/backgroundPillar/pillar1.png"} alt="Your GIF"
                                      className={"about-gap-one-pillar-three"}/>
                             </Parallax>
-                            <Parallax speed={-20}>
+                            <Parallax speed={80}>
                                 <img src={"/backgroundPillar/pillar1.png"} alt="Your GIF"
                                      className={"about-gap-one-pillar-four"}/>
                             </Parallax>
@@ -320,17 +353,22 @@ const handleImageIntersection = (entries, observer) => {
                         <img className={"about-approach-progress-bar-two"} src={"/about/bottomProgressUp.png"}
                              alt="Your GIF"/>
 
-                        <img src={"about/Colourblur.png"} alt="Your GIF"
-                             className={"about-approach-section-overlay"}/>
+                        {/*<img src={"about/Colourblur.png"} alt="Your GIF"*/}
+                        {/*     className={"about-approach-section-overlay"}/>*/}
                         <div className={"about-approach-section-content"}>
                             <div className={"about-approach-section-header"}>
+                                  <Parallax speed={10}>
                                 <h1 className={`about-approach-section-heading ${roboto.className}`}>
                                     WHAT'S THE
                                 </h1>
+                                  </Parallax>
+                                  <Parallax speed={20}>
                                 <h1 className={`about-approach-section-heading ${roboto.className}`}><span
-                                    className={"about-approach-section-heading-blue"}> APPROACH</span></h1>
+                                    className={"about-approach-section-heading-blue"}> APPROACH</span></h1></Parallax>
+
                             </div>
                             <div className={"about-approach-section-text"}>
+                                  <Parallax speed={20}>
                                 <p className={`about-approach-section-paragraph-one ${titleText.className}`}>
                                     Nxt Evolv Media understands how time consuming, stressful and difficult it is to
                                     identify
@@ -341,6 +379,8 @@ const handleImageIntersection = (entries, observer) => {
                                     to
                                     get to...
                                 </p>
+                                  </Parallax>
+                                  {/*<Parallax speed={30}>*/}
                                 <p className={`about-approach-section-paragraph-two ${titleText.className}`}>
                                     A simple solution.... Let us handle this for you! At Nxt Evolv Media we believe that
                                     a
@@ -352,6 +392,7 @@ const handleImageIntersection = (entries, observer) => {
                                     and
                                     branding goals met!
                                 </p>
+                                  {/*</Parallax>*/}
                             </div>
 
                         </div>
@@ -367,14 +408,14 @@ const handleImageIntersection = (entries, observer) => {
                         <img className={"about-vision-progress-bar-three"}
                              src={"/about/bottomProgressInvisibleDown.png"}
                              alt="Your GIF"/>
-                        <img src={"about/Colourblur.png"} alt="Your GIF"
-                             className={"about-gap-section-two-container-overlay"}/>
+                        {/*<img src={"about/Colourblur.png"} alt="Your GIF"*/}
+                        {/*     className={"about-gap-section-two-container-overlay"}/>*/}
                         <div className={"about-gap-two-pillars-container"}>
-                            <Parallax speed={30}>
+                            <Parallax speed={60}>
                                 <img src={"/about/LogoSinglePillar_1.png"} alt="Your GIF"
                                      className={"about-gap-two-pillar-one"}/>
                             </Parallax>
-                            <Parallax speed={-10}>
+                            <Parallax speed={55}>
                                 <img src={"/backgroundPillar/pillar1.png"} alt="Your GIF"
                                      className={"about-gap-two-pillar-two"}/>
                             </Parallax>
@@ -392,17 +433,22 @@ const handleImageIntersection = (entries, observer) => {
                              alt="Your GIF"/>
                         <img className={"about-vision-progress-bar-three"} src={"/about/bottomProgressDown.png"}
                              alt="Your GIF"/>
-                        <img src={"about/Colourblur.png"} alt="Your GIF"
-                             className={"about-vision-section-overlay"}/>
+                        {/*<img src={"about/Colourblur.png"} alt="Your GIF"*/}
+                        {/*     className={"about-vision-section-overlay"}/>*/}
                         <div className={"about-vision-section-content"}>
                             <div className={"about-vision-section-header"}>
+                                    <Parallax speed={10}>
                                 <h1 className={`about-vision-section-heading ${roboto.className}`}>
                                     WHAT'S THE
                                 </h1>
+                                    </Parallax>
+                                    <Parallax speed={20}>
                                 <h1 className={`about-vision-section-heading ${roboto.className}`}><span
                                     className={"about-vision-section-heading-blue"}> VISION</span></h1>
+                                    </Parallax>
                             </div>
                             <div className={"about-vision-section-text"}>
+                                    <Parallax speed={20}>
                                 <p className={`about-vision-section-paragraph-one ${titleText.className}`}>
                                     Our vision at Nxt Evolv Media is created around our client's needs and how we can
                                     help
@@ -412,6 +458,7 @@ const handleImageIntersection = (entries, observer) => {
                                     Evolv
                                     Media they will always be winning and ahead of the competition.
                                 </p>
+                                    </Parallax>
                                 <p className={`about-vision-section-paragraph-two ${titleText.className}`}>
                                     Our primary focus is our client's ROI, digital presence and brand.
                                 </p>

@@ -4,6 +4,17 @@
     z-index: 0;
 }
 
+
+
+/*container blur*/
+.about-page-container-blur {
+    position: fixed;
+    top: 60vh;
+    width: 99vw;
+    height: 50vh;
+    z-index: 100;
+}
+
 .about-page-container-overlay-blur {
     position: absolute;
     width: 99vw;
@@ -51,6 +62,25 @@
 
     z-index: 10;
 
+}
+
+.about-page-x-container {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 20;
+}
+
+.about-page-x-container-row-one {
+    display: flex;
+    flex-direction: row;
+}
+.about-page-x-container-row-two {
+    display: flex;
+    flex-direction: row;
+}
+.about-page-x-img{
+        /*transform: rotate(45deg);*/
 }
 
 .about-header-content {
@@ -131,7 +161,9 @@
 
 .about-about-section-container {
     position: relative;
-    background-image: url(../public/about/cloudsDark.gif);
+    background-image:  url(../public/about/cloudsDark.gif);
+        background-color: lightgray;
+    background-blend-mode: hard-light;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -143,6 +175,8 @@
 
 /*adding image as overlay*/
 .about-about-section-overlay {
+    /*background-color: lightgray;*/
+    /*background-blend-mode: hard-light;*/
     position: absolute;
     height: 50vh;
     width: 99vw;
@@ -164,7 +198,7 @@
 }
 
 .about-about-section-text {
-    margin-top: 4rem;
+    margin-top: 0rem;
     width: 45%;
     margin-right: 8rem;
     margin-left: auto;
@@ -230,6 +264,8 @@
 .about-gap-section-one-container {
     position: relative;
     background-image: url(../public/about/cloudsDark.gif);
+            background-color: lightgray;
+    background-blend-mode: hard-light;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -309,6 +345,8 @@
 .about-approach-section-container {
     position: relative;
     background-image: url(../public/about/cloudsDark.gif);
+            background-color: lightgray;
+    background-blend-mode: hard-light;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -423,6 +461,8 @@
 .about-gap-section-two-container {
     position: relative;
     background-image: url(../public/about/cloudsDark.gif);
+            background-color: lightgray;
+    background-blend-mode: hard-light;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -555,6 +595,8 @@
 .about-vision-section-container {
     position: relative;
     background-image: url(../public/about/cloudsDark.gif);
+            background-color: lightgray;
+    background-blend-mode: hard-light;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -669,6 +711,8 @@
     display: flex;
     position: relative;
     background-image: url(../public/about/cloudsDark.gif);
+            background-color: lightgray;
+    background-blend-mode: hard-light;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -719,7 +763,9 @@
 .about-find-out-more-container {
     display: flex;
     position: relative;
-    background-color: black;
+    background-image: url(../public/about/cloudsDark.gif);
+            background-color: lightgray;
+    background-blend-mode: hard-light;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
