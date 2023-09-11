@@ -198,9 +198,9 @@ const handleImageIntersection = (entries, observer) => {
                 {/*</Parallax>*/}
 
                 {/*3 dots*/}
-                <div className="about-page-dot"></div>
-                <div className="about-page-dot"></div>
-                <div className="about-page-dot"></div>
+                <img src={"socials/Facebook-02.svg"} className="about-page-dot"></img>
+                <img src={"socials/Instagram.svg"}  className="about-page-dot"></img>
+                <img src={"socials/LinkedIn-03.svg"}  className="about-page-dot"></img>
                 {/*end 3 dots*/}
 
                 {/* 6 X at bottom right*/}
@@ -520,9 +520,9 @@ const handleImageIntersection = (entries, observer) => {
                         </div>
                         <div className={"about-find-horizontal-container"}>
                             <div className={"about-find-dots-container"}>
-                                <div className={"about-find-horizontal-dot"}></div>
-                                <div className={"about-find-horizontal-dot"}></div>
-                                <div className={"about-find-horizontal-dot"}></div>
+                                <img src={"socials/Facebook-02.svg"} className={"about-find-horizontal-dot"}></img>
+                                <img src={"socials/Instagram.svg"} className={"about-find-horizontal-dot"}></img>
+                                <img  src={"socials/LinkedIn-03.svg"} className={"about-find-horizontal-dot"}></img>
                             </div>
                             <div className={"about-find-text"}>
                                 <p className={`about-find-text-paragraph ${titleText.className}`}>
