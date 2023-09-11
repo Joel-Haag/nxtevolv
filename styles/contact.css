@@ -1,0 +1,251 @@
+.contact-page-content-container {
+    background-image: url(../public/about/LoopedClouds.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    z-index: 10;
+}
+
+.contact-page-header-text {
+    padding-top: 14%;
+    margin-left: 10rem;
+    width: 50%;
+
+}
+
+.contact-page-header-text-one {
+    font-size: 3.5rem;
+    color: #ffffff;
+}
+
+.contact-page-header-text-two {
+    font-size: 3.5rem;
+    font-weight: 400;
+    color: #49ccfc;
+}
+
+.contact-page-header-text-three {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-left: 2rem;
+}
+
+.contact-page-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-page-content-left {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    font-size: 1.3rem;
+    color: #ffffff;
+}
+
+.contact-page-content-left-text-one {
+    margin-left: 12rem;
+    margin-top: 5rem;
+}
+
+.contact-page-content-left-text-two {
+    margin-left: 12rem;
+}
+
+.contact-page-content-left-text-three {
+    margin-left: 12rem;
+}
+
+.contact-page-content-left-text-four {
+    margin-left: 12rem;
+}
+
+
+.contact-page-content-right {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+
+.contact-page-content-right-form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-left: 10rem;
+}
+
+.contact-page-content-right-form-name {
+    background: rgba(0, 0, 0, 0.51);
+    color: #ffffff;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 10px;
+    cursor: none;
+}
+
+.contact-page-content-right-form-email {
+    background: rgba(0, 0, 0, 0.51);
+    padding: 0.5rem;
+    color: #ffffff;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: none;
+}
+
+.contact-page-content-right-form-message {
+    background: rgba(0, 0, 0, 0.51);
+    padding: 0.5rem;
+    color: #ffffff;
+    margin-top: 1rem;
+    height: 13rem;
+    border: none;
+    border-radius: 10px;
+    cursor: none;
+}
+
+/*when one of the forms is selected change the select effect */
+.contact-page-content-right-form-name:focus,
+.contact-page-content-right-form-email:focus,
+.contact-page-content-right-form-message:focus {
+    outline: none;
+    border: 2px solid #49ccfc;
+    cursor: none;
+}
+
+.contact-page-content-right-form-submit {
+    background: #49ccfc;
+    color: #ffffff;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-page-content-right-form-submit:hover {
+    scale: 1.1;
+    background: #ffffff;
+    color: #49ccfc;
+    cursor: none;
+}
+
+
+/*media queries*/
+@media screen and (max-width: 768px) {
+
+    /*making sure the image is repeated if on mobile the page needs to scroll*/
+    .contact-page-content-container {
+        background-repeat: repeat;
+    }
+
+    /*  first the heading  */
+    .contact-page-header {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .contact-page-header-text {
+        padding-top: 10rem;
+        margin: 0;
+
+    }
+
+    .contact-page-header-text-one {
+        margin: 0;
+        font-size: 2rem;
+
+    }
+
+    .contact-page-header-text-two {
+        font-size: 2rem;
+        margin: 0;
+    }
+
+    .contact-page-header-text-three {
+        font-size: 1.5rem;
+        margin-left: 2rem;
+    }
+
+    /*the contetent*/
+    .contact-page-content {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    /*  now the emails and number  */
+    .contact-page-content-left {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-page-content-left-text-one {
+        margin-left: 0;
+        margin-top: 2rem;
+    }
+
+    .contact-page-content-left-text-two {
+        margin-left: 0;
+    }
+
+    .contact-page-content-left-text-three {
+        margin-left: 0;
+    }
+
+    .contact-page-content-left-text-four {
+        margin-left: 0;
+    }
+
+    /*  now the form  */
+    .contact-page-content-right {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-page-content-right-form {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-page-content-right-form-name {
+        width: 100%;
+
+    }
+
+    .contact-page-content-right-form-email {
+        width: 100%;
+
+    }
+
+    .contact-page-content-right-form-message {
+        width: 100%;
+
+    }
+
+    .contact-page-content-right-form-submit {
+        width: 100%;
+
+    }
+
+}

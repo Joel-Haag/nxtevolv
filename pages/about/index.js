@@ -238,7 +238,7 @@ const handleImageIntersection = (entries, observer) => {
                                 <Nav.Link href="/" className="nav-link nav-link-items">HOME</Nav.Link>
                                 <Nav.Link href="about" className="nav-link nav-link-items">ABOUT US</Nav.Link>
                                 <Nav.Link href="#link" className="nav-link nav-link-items">SERVICES</Nav.Link>
-                                <Nav.Link href="#link" className="nav-link contact-link">CONTACT US</Nav.Link>
+                                <Nav.Link href="contact" className="nav-link contact-link">CONTACT US</Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Container>
