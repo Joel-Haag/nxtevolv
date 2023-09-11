@@ -52,7 +52,7 @@
 /*About header container*/
 .about-header-container {
     position: relative;
-    background-image: url(../public/about/backgroundClouds.gif);
+    background-image: url(../public/about/LoopedClouds.gif);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -179,7 +179,7 @@
 
 .about-about-section-container {
     position: relative;
-    background-image:  url(../public/about/LoopedDarkend.gif);
+    background-image:  url(../public/about/LoopedDarkend2.gif);
         background-color: lightgray;
     background-blend-mode: hard-light;
     background-repeat: no-repeat;
@@ -281,7 +281,7 @@
 /*The gap with logo symbols coming up*/
 .about-gap-section-one-container {
     position: relative;
-    background-image:  url(../public/about/LoopedDarkend.gif);
+    background-image:  url(../public/about/LoopedDarkend2.gif);
             background-color: lightgray;
     background-blend-mode: hard-light;
     background-repeat: no-repeat;
@@ -362,7 +362,7 @@
 
 .about-approach-section-container {
     position: relative;
-    background-image:  url(../public/about/LoopedDarkend.gif);
+    background-image:  url(../public/about/LoopedDarkend2.gif);
             background-color: lightgray;
     background-blend-mode: hard-light;
     background-repeat: no-repeat;
@@ -478,7 +478,7 @@
 /*The gap with logo symbols coming up*/
 .about-gap-section-two-container {
     position: relative;
-    background-image:  url(../public/about/LoopedDarkend.gif);
+    background-image:  url(../public/about/LoopedDarkend2.gif);
             background-color: lightgray;
     background-blend-mode: hard-light;
     background-repeat: no-repeat;
@@ -605,7 +605,7 @@
 
 .about-vision-section-container {
     position: relative;
-    background-image:  url(../public/about/LoopedDarkend.gif);
+    background-image:  url(../public/about/LoopedDarkend2.gif);
             background-color: lightgray;
     background-blend-mode: hard-light;
     background-repeat: no-repeat;
@@ -723,7 +723,7 @@
 
     display: flex;
     position: relative;
-    background-image:  url(../public/about/LoopedDarkend.gif);
+    background-image:  url(../public/about/LoopedDarkend2.gif);
 
             background-color: lightgray;
     background-blend-mode: hard-light;
@@ -777,7 +777,7 @@
 .about-find-out-more-container {
     display: flex;
     position: relative;
-    background-image:  url(../public/about/LoopedDarkend.gif);
+    background-image:  url(../public/about/LoopedDarkend2.gif);
             background-color: lightgray;
     background-blend-mode: hard-light;
     background-repeat: no-repeat;
