@@ -125,6 +125,14 @@ export default function Home() {
                     <img src={"socials/LinkedIn-03.svg"} className="home-page-dot"></img>
                     {/*end 3 dots*/}
 
+                    {/*circles and x */}
+                    <div className={"home-circle-container"}>
+                        <img src={"/about/circle.png"} alt="Your GIF" className={"home-circle-img"}/>
+                    </div>
+                    <div className={"home-x-container"}>
+                        <img src={"/about/x.png"} alt="Your GIF" className={"home-x-img"}/>
+                    </div>
+
                     <img src={"about/Colourblur.png"} alt="Your GIF"
                          className={"home-page-container-blur"}/>
 
@@ -257,6 +265,7 @@ export default function Home() {
                             </div>
                             {/*  gap one with symbols  */}
                             <div className={"home-page-gap-one"}>
+
                                 <div className={"home-gap-one-pillars-container"}>
                                     <Parallax speed={60}>
                                         <img src={"/about/LogoSinglePillar_1.png"} alt="Your GIF"

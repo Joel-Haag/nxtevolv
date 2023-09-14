@@ -15,7 +15,7 @@
 }
 
 .first-container-two {
-    z-index: 10;
+    z-index: 30;
     height: 100vh;
     background-image: url(../public/about/LoopedClouds.gif);
     background-repeat: no-repeat;
@@ -146,12 +146,16 @@
 
 /*Heading for home page opening*/
 
+.home-page-intro {
+    z-index: 100;
+}
 .home-page-heading {
     padding-top: 15rem;
     text-transform: uppercase;
     width: 50%;
     margin-left: 10rem;
 }
+
 
 .home-heading-text-one {
     font-size: 4rem;
@@ -239,6 +243,33 @@
         margin-right: auto;
         width: 80%;
     }
+}
+
+/* x and circle background tings*/
+.home-circle-container {
+    z-index: 5;
+    position: fixed;
+    top: 2.5rem;
+    left: 12rem;
+}
+
+.home-circle-img {
+    z-index: 5;
+    width: 10rem;
+    height: 10rem;
+}
+
+.home-x-container {
+    z-index: 5;
+    position: fixed;
+    top: 15rem;
+    left: 5rem;
+}
+
+.home-x-img {
+    z-index: 5;
+    width: 15rem;
+    height: 15rem;
 }
 
 /* who is nxt evolv media*/
