@@ -38,6 +38,27 @@ export default function Home() {
     const [scrollDirection, setScrollDirection] = useState('none');
     const [scrollPosition, setScrollPosition] = useState(0);
     const [rotation, setRotation] = useState(0);
+    const [windowWidth, setWindowWidth] = useState(0);
+
+    useEffect(() => {
+        // Function to update the screen width in the state
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        // Initial screen width
+        handleResize();
+
+        // Event listener to update screen width on window resize
+        window.addEventListener('resize', handleResize);
+
+        // Clean up the event listener on unmount
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    const mobileThreshold = 768;
 
 
     const [mousePosition, setMousePosition] = useState({x: 0, y: 0});
@@ -366,56 +387,122 @@ export default function Home() {
                             </div>
 
                             {/*  Interesting Facts Section  */}
-                            <div className={"home-page-interesting-facts-container"}>
-                                <div className={"home-page-interesting-facts-image-container"}>
-                                    <img src={"/homePageImages/InterestingFactsChar.png"} alt="Your GIF"
-                                         className={"home-page-interesting-fact-image"}/>
-                                </div>
-                                <div className={"home-page-interesting-facts-content-container"}>
-                                    <div className={"home-page-interesting-facts-heading"}>
-                                        <h2 className={`home-heading-interesting-facts-text-one ${roboto.className}`}>
-                                            INTERESTING FACTS
-                                        </h2>
+                            {windowWidth <= mobileThreshold ? (
+
+                                <div className={"home-page-interesting-facts-container"}>
+                                    <div className={"home-page-interesting-facts-image-container"}>
+                                            <img src={"/homePageImages/InterestingFactsChar.png"} alt="Your GIF"
+                                                 className={"home-page-interesting-fact-image"}/>
                                     </div>
-                                    <div className={"home-interesting-facts-content"}>
-                                        <div className={"home-interesting-facts-content-col"}>
-                                            <h3 className={`home-interesting-facts-title ${roboto.className}`}>
-                                                75
-                                            </h3>
-                                            <p className={`home-interesting-facts-text ${roboto.className}`}>
-                                                Percent of consumers agreed that they are keen on buying from brands
-                                                that
-                                                offer personalized digital experiences.
-                                            </p>
+                                    <div className={"home-page-interesting-facts-content-container"}>
+                                        <div className={"home-page-interesting-facts-heading"}>
+                                                <h2 className={`home-heading-interesting-facts-text-one ${roboto.className}`}>
+                                                    INTERESTING FACTS
+                                                </h2>
                                         </div>
-                                        <div className={"home-interesting-facts-content-col"}>
-                                            <h3 className={`home-interesting-facts-title ${roboto.className}`}>
-                                                4.9
-                                            </h3>
-                                            <p className={`home-interesting-facts-text ${roboto.className}`}>
-                                                Billion people are active on social media!
-                                            </p>
-                                        </div>
-                                        <div className={"home-interesting-facts-content-col"}>
-                                            <h3 className={`home-interesting-facts-title ${roboto.className}`}>
-                                                54
-                                            </h3>
-                                            <p className={`home-interesting-facts-text ${roboto.className}`}>
-                                                Percent of internet users use social media to research services and
-                                                products before purchasing.
-                                            </p>
-                                        </div>
-                                        <div className={"home-interesting-facts-content-col"}>
-                                            <h3 className={`home-interesting-facts-title ${roboto.className}`}>
-                                                83
-                                            </h3>
-                                            <p className={`home-interesting-facts-text ${roboto.className}`}>
-                                                Percent of search traffic comes from Google!
-                                            </p>
-                                        </div>
+                                            <div className={"home-interesting-facts-content"}>
+                                                <div className={"home-interesting-facts-content-col"}>
+                                                    <h3 className={`home-interesting-facts-title ${roboto.className}`}>
+                                                        75
+                                                    </h3>
+                                                    <p className={`home-interesting-facts-text ${roboto.className}`}>
+                                                        Percent of consumers agreed that they are keen on buying from
+                                                        brands
+                                                        that
+                                                        offer personalized digital experiences.
+                                                    </p>
+                                                </div>
+                                                <div className={"home-interesting-facts-content-col"}>
+                                                    <h3 className={`home-interesting-facts-title ${roboto.className}`}>
+                                                        4.9
+                                                    </h3>
+                                                    <p className={`home-interesting-facts-text ${roboto.className}`}>
+                                                        Billion people are active on social media!
+                                                    </p>
+                                                </div>
+                                                <div className={"home-interesting-facts-content-col"}>
+                                                    <h3 className={`home-interesting-facts-title ${roboto.className}`}>
+                                                        54
+                                                    </h3>
+                                                    <p className={`home-interesting-facts-text ${roboto.className}`}>
+                                                        Percent of internet users use social media to research services
+                                                        and
+                                                        products before purchasing.
+                                                    </p>
+                                                </div>
+                                                <div className={"home-interesting-facts-content-col"}>
+                                                    <h3 className={`home-interesting-facts-title ${roboto.className}`}>
+                                                        83
+                                                    </h3>
+                                                    <p className={`home-interesting-facts-text ${roboto.className}`}>
+                                                        Percent of search traffic comes from Google!
+                                                    </p>
+                                                </div>
+                                            </div>
                                     </div>
                                 </div>
-                            </div>
+                            ) : (
+                                <div className={"home-page-interesting-facts-container"}>
+                                    <div className={"home-page-interesting-facts-image-container"}>
+                                        <Parallax speed={15}>
+                                            <img src={"/homePageImages/InterestingFactsChar.png"} alt="Your GIF"
+                                                 className={"home-page-interesting-fact-image"}/>
+                                        </Parallax>
+                                    </div>
+                                    <div className={"home-page-interesting-facts-content-container"}>
+                                        <div className={"home-page-interesting-facts-heading"}>
+                                            <Parallax translateX={[-5, 20]}>
+                                                <h2 className={`home-heading-interesting-facts-text-one ${roboto.className}`}>
+                                                    INTERESTING FACTS
+                                                </h2>
+                                            </Parallax>
+                                        </div>
+                                        <Parallax translateX={[5, -10]}>
+                                            <div className={"home-interesting-facts-content"}>
+                                                <div className={"home-interesting-facts-content-col"}>
+                                                    <h3 className={`home-interesting-facts-title ${roboto.className}`}>
+                                                        75
+                                                    </h3>
+                                                    <p className={`home-interesting-facts-text ${roboto.className}`}>
+                                                        Percent of consumers agreed that they are keen on buying from
+                                                        brands
+                                                        that
+                                                        offer personalized digital experiences.
+                                                    </p>
+                                                </div>
+                                                <div className={"home-interesting-facts-content-col"}>
+                                                    <h3 className={`home-interesting-facts-title ${roboto.className}`}>
+                                                        4.9
+                                                    </h3>
+                                                    <p className={`home-interesting-facts-text ${roboto.className}`}>
+                                                        Billion people are active on social media!
+                                                    </p>
+                                                </div>
+                                                <div className={"home-interesting-facts-content-col"}>
+                                                    <h3 className={`home-interesting-facts-title ${roboto.className}`}>
+                                                        54
+                                                    </h3>
+                                                    <p className={`home-interesting-facts-text ${roboto.className}`}>
+                                                        Percent of internet users use social media to research services
+                                                        and
+                                                        products before purchasing.
+                                                    </p>
+                                                </div>
+                                                <div className={"home-interesting-facts-content-col"}>
+                                                    <h3 className={`home-interesting-facts-title ${roboto.className}`}>
+                                                        83
+                                                    </h3>
+                                                    <p className={`home-interesting-facts-text ${roboto.className}`}>
+                                                        Percent of search traffic comes from Google!
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </Parallax>
+                                    </div>
+                                </div>
+
+                            )}
+
 
                             {/*  find out more section  */}
                             {/*    FIND OUT MORE SECTION */}
