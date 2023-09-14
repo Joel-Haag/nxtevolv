@@ -294,20 +294,27 @@
 
 /* media queries for who section*/
 @media (max-width: 750px) {
+    .home-page-who-container {
+        height: 100%;
+    }
+
     .home-page-who-heading {
         text-align: center;
-        padding-top: 20rem;
+        padding-top: 10rem;
         width: 100%;
         margin-left: 0;
+        margin-bottom: 10rem;
 
     }
 
     .home-heading-who-text-one {
         font-size: 2.5rem;
+        margin-top: 5rem;
     }
 
     .home-heading-who-text-two {
         font-size: 2.5rem;
+          margin-top: 0rem;
     }
 
     .home-who-content {
@@ -388,7 +395,7 @@ s
     .home-gap-one-pillar-one {
         width: 10rem;
         height: 10rem;
-        top: 50rem;
+        top: 10rem;
         left: 0;
         right: 0;
         bottom: 0;
@@ -404,7 +411,7 @@ s
     .home-gap-one-pillar-three {
         width: 10rem;
         height: 10rem;
-        top: 30rem;
+        top: 15rem;
         right: 50rem;
         bottom: 0;
     }
@@ -457,7 +464,7 @@ s
     margin-top: 2rem;
 }
 
-.home-philosophy-horizontal-banner-text  {
+.home-philosophy-horizontal-banner-text {
     font-size: 3rem;
     color: #ffffff;
     text-align: center;
@@ -501,6 +508,11 @@ s
 
 /* media queries for philisophy section */
 @media (max-width: 750px) {
+
+    .home-page-philosophy-container {
+        height: 100%;
+    }
+
     .home-page-philosophy-heading {
         text-align: center;
         padding-top: 20rem;
@@ -517,6 +529,19 @@ s
     .home-heading-philosophy-text-two {
         text-align: center;
         font-size: 2.5rem;
+    }
+
+    .home-philosophy-horizontal-banner {
+        position: relative;
+        width: 0%;
+        margin-left: -15rem;
+        margin-top: 2rem;
+    }
+
+    .home-philosophy-horizontal-banner-text {
+        font-size: 0rem;
+        color: #ffffff;
+        text-align: center;
     }
 
     .home-philosophy-content {
@@ -609,7 +634,7 @@ s
         bottom: 0;
     }
 
-    .home-gap-two-pillar-two{
+    .home-gap-two-pillar-two {
         width: 10rem;
         height: 10rem;
         left: 25%;
@@ -674,7 +699,7 @@ s
 
 .home-heading-interesting-facts-text-one {
     font-size: 5rem;
-        color: #49ccfc;
+    color: #49ccfc;
 }
 
 .home-interesting-facts-content {
@@ -742,7 +767,7 @@ s
     }
 
     .home-interesting-facts-text {
-              text-align: center;
+        text-align: center;
         padding: 1rem;
         font-size: 1rem;
     }
