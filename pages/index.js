@@ -14,6 +14,7 @@ import {Parallax} from "react-scroll-parallax";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faArrowDown} from "@fortawesome/free-solid-svg-icons";
 
+
 const orbitron = Orbitron({
     subsets: ['latin'],
     weight: '400'
@@ -224,25 +225,34 @@ export default function Home() {
                             {/*  page two - who we are  */}
                             <div className={"home-page-who-container"}>
                                 <div className={"home-page-who-heading"}>
-                                    <h2 className={`home-heading-who-text-one ${roboto.className}`}>
-                                        WHO IS
-                                    </h2>
-                                    <h2 className={`home-heading-who-text-two ${roboto.className}`}>
-                                        NXT EVOLV MEDIA
-                                    </h2>
+                                    <Parallax speed={-5}>
+                                        <h2 className={`home-heading-who-text-one ${roboto.className}`}>
+                                            WHO IS
+                                        </h2>
+                                    </Parallax>
+                                    <Parallax speed={-5}>
+                                        <h2 className={`home-heading-who-text-two ${roboto.className}`}>
+                                            NXT EVOLV MEDIA
+                                        </h2>
+                                    </Parallax>
                                 </div>
                                 <div className={"home-who-content"}>
-                                    <p className={`home-who-paragraph-text-one ${roboto.className}`}>
-                                        NXT Evolv Media is a digital marketing and media agency located in Johannesburg
-                                        South Africa.
-                                    </p>
-                                    <p className={`home-who-paragraph-text-two ${roboto.className}`}>
-                                        We are passionate about transforming the world of entertainment and the way
-                                        brands connect with their audience. Our innovative approach combines
-                                        cutting-edge
-                                        technology, creative storytelling, and data-driven strategies to deliver
-                                        unparalleled results.
-                                    </p>
+                                    <Parallax speed={20}>
+                                        <p className={`home-who-paragraph-text-one ${roboto.className}`}>
+                                            NXT Evolv Media is a digital marketing and media agency located in
+                                            Johannesburg
+                                            South Africa.
+                                        </p>
+                                    </Parallax>
+                                    <Parallax speed={40}>
+                                        <p className={`home-who-paragraph-text-two ${roboto.className}`}>
+                                            We are passionate about transforming the world of entertainment and the way
+                                            brands connect with their audience. Our innovative approach combines
+                                            cutting-edge
+                                            technology, creative storytelling, and data-driven strategies to deliver
+                                            unparalleled results.
+                                        </p>
+                                    </Parallax>
                                 </div>
                             </div>
                             {/*  gap one with symbols  */}
@@ -252,10 +262,6 @@ export default function Home() {
                                         <img src={"/about/LogoSinglePillar_1.png"} alt="Your GIF"
                                              className={"home-gap-one-pillar-one"}/>
                                     </Parallax>
-                                    {/*<Parallax speed={5}>*/}
-                                    {/*    <img src={"/backgroundPillar/pillar1.png"} alt="Your GIF"*/}
-                                    {/*         className={"home-gap-one-pillar-two"}/>*/}
-                                    {/*</Parallax>*/}
                                     <Parallax speed={25}>
                                         <img src={"/backgroundPillar/pillar1.png"} alt="Your GIF"
                                              className={"home-gap-one-pillar-three"}/>
@@ -270,35 +276,61 @@ export default function Home() {
                             {/*  Philosophy section  */}
                             <div className={"home-page-philosophy-container"}>
                                 <div className={"home-page-philosophy-heading"}>
+                                    {/*<Parallax speed={-15}>*/}
                                     <h2 className={`home-heading-philosophy-text-one ${roboto.className}`}>
                                         WHAT'S THE
                                     </h2>
+                                    {/*</Parallax>*/}
+                                    {/*<Parallax speed={-15}>*/}
                                     <h2 className={`home-heading-philosophy-text-two ${roboto.className}`}>
                                         PHILOSOPHY
                                     </h2>
+                                    {/*</Parallax>*/}
+                                </div>
+                                <div className={"home-philosophy-horizontal-banner"}>
+                                    <Parallax translateX={[0, -20]}>
+                                        <h2 className={`home-philosophy-horizontal-banner-text ${roboto.className}`}>
+                                            QUALITY <span className={"small-space"}/> STRONG WORK ETHIC <span
+                                            className={"small-space"}/> EXCELLENCE <span
+                                            className={"small-space"}/> GROWTH <span
+                                            className={"small-space"}/> QUALITY <span className={"small-space"}/> STRONG
+                                            WORK ETHIC <span className={"small-space"}/> EXCELLENCE
+                                        </h2>
+                                    </Parallax>
                                 </div>
                                 <div className={"home-philosophy-content"}>
+                                    {/*<Parallax speed={10}>*/}
                                     <p className={`home-philosophy-paragraph-text-one ${roboto.className}`}>
                                         At Nxt Evolv Media we believe in Excellence, a Strong Work Ethic, Great Overall
                                         Quality and Exponential Growth! Providing our clients with the utmost best!
                                     </p>
+                                    {/*</Parallax>*/}
+                                    {/*   <Parallax speed={15}>*/}
                                     <p className={`home-philosophy-paragraph-text-two ${roboto.className}`}>
                                         Excellence in media and digital marketing means always striving for the highest
                                         standard of quality and achievement.
                                     </p>
+                                    {/*</Parallax>*/}
+                                    {/*<Parallax speed={20}>*/}
                                     <p className={`home-philosophy-paragraph-text-three ${roboto.className}`}>
-                                        It means having a strong work ethic and putting hard work and effort necessary
+                                        - It means having a strong work ethic and putting hard work and effort necessary
                                         to succeed into each and every approach.
                                     </p>
+                                    {/*</Parallax>*/}
+                                    {/*    <Parallax speed={20}>*/}
                                     <p className={`home-philosophy-paragraph-text-four ${roboto.className}`}>
-                                        It means being open to growth and learning, so that our company can continually
+                                        - It means being open to growth and learning, so that our company can
+                                        continually
                                         improve and evolve as a digital marketing and media agency.
                                     </p>
+                                    {/*</Parallax>*/}
+                                    {/*<Parallax speed={25}>*/}
                                     <p className={`home-philosophy-paragraph-text-five ${roboto.className}`}>
                                         At Nxt Evolv Media we are dedicated to excellence and are committed to helping
                                         our clients achieve the highest levels of success when it comes to their digital
                                         marketing presence and business goals.
                                     </p>
+                                    {/*</Parallax>*/}
                                 </div>
                             </div>
 

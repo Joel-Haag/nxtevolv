@@ -436,7 +436,7 @@ s
 .home-page-philosophy-heading {
     text-transform: uppercase;
     width: 40%;
-    margin-left: 10rem;
+    margin-left: 2rem;
 }
 
 .home-heading-philosophy-text-one {
@@ -451,11 +451,27 @@ s
     text-align: end;
 }
 
+.home-philosophy-horizontal-banner {
+    width: 200%;
+    margin-left: -15rem;
+    margin-top: 2rem;
+}
+
+.home-philosophy-horizontal-banner-text  {
+    font-size: 3rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+.small-space {
+    margin-right: 1.5rem;
+}
+
 .home-philosophy-content {
     width: 30%;
     margin-left: auto;
     margin-right: 20rem;
-    margin-top: 8rem;
+    margin-top: 4rem;
 }
 
 .home-philosophy-paragraph-text-one {
