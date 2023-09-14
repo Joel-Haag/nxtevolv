@@ -3,6 +3,7 @@
 html {
     cursor: none;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 html,
