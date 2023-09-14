@@ -5,7 +5,6 @@
 }
 
 
-
 /*container blur*/
 .about-page-container-blur {
     position: fixed;
@@ -76,12 +75,14 @@
     display: flex;
     flex-direction: row;
 }
+
 .about-page-x-container-row-two {
     display: flex;
     flex-direction: row;
 }
-.about-page-x-img{
-        /*transform: rotate(45deg);*/
+
+.about-page-x-img {
+    /*transform: rotate(45deg);*/
 }
 
 /*media queries for x container*/
@@ -91,13 +92,15 @@
     }
 
     .about-page-x-container-row-one {
-           width: 0rem;
+        width: 0rem;
     }
+
     .about-page-x-container-row-two {
-           width: 0rem;
+        width: 0rem;
     }
-    .about-page-x-img{
-           width: 0rem;
+
+    .about-page-x-img {
+        width: 0rem;
     }
 }
 
@@ -179,8 +182,8 @@
 
 .about-about-section-container {
     position: relative;
-    background-image:  url(../public/about/LoopedDarkend2.gif);
-        background-color: lightgray;
+    background-image: url(../public/about/LoopedDarkend2.gif);
+    background-color: lightgray;
     background-blend-mode: hard-light;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -281,8 +284,8 @@
 /*The gap with logo symbols coming up*/
 .about-gap-section-one-container {
     position: relative;
-    background-image:  url(../public/about/LoopedDarkend2.gif);
-            background-color: lightgray;
+    background-image: url(../public/about/LoopedDarkend2.gif);
+    background-color: lightgray;
     background-blend-mode: hard-light;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -362,8 +365,8 @@
 
 .about-approach-section-container {
     position: relative;
-    background-image:  url(../public/about/LoopedDarkend2.gif);
-            background-color: lightgray;
+    background-image: url(../public/about/LoopedDarkend2.gif);
+    background-color: lightgray;
     background-blend-mode: hard-light;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -478,8 +481,8 @@
 /*The gap with logo symbols coming up*/
 .about-gap-section-two-container {
     position: relative;
-    background-image:  url(../public/about/LoopedDarkend2.gif);
-            background-color: lightgray;
+    background-image: url(../public/about/LoopedDarkend2.gif);
+    background-color: lightgray;
     background-blend-mode: hard-light;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -523,7 +526,7 @@
 /*media queries for pillars*/
 @media screen and (max-width: 768px) {
     .about-gap-two-pillar-one {
-           width: 10rem;
+        width: 10rem;
         height: 10rem;
         top: 12rem;
         left: 0;
@@ -531,7 +534,7 @@
     }
 
     .about-gap-two-pillar-two {
-       width: 10rem;
+        width: 10rem;
         height: 10rem;
         top: 16rem;
         right: 50rem;
@@ -562,7 +565,7 @@
     }
 
     .about-gap-one-pillar-four {
-         width: 0rem;
+        width: 0rem;
         height: 0rem;
         top: 0;
         right: 0rem;
@@ -605,8 +608,8 @@
 
 .about-vision-section-container {
     position: relative;
-    background-image:  url(../public/about/LoopedDarkend2.gif);
-            background-color: lightgray;
+    background-image: url(../public/about/LoopedDarkend2.gif);
+    background-color: lightgray;
     background-blend-mode: hard-light;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -719,13 +722,13 @@
 
 /*small gap before find out more*/
 .about-small-gap-before-more-section-container {
-        border: solid red;
+    border: solid red;
 
     display: flex;
     position: relative;
-    background-image:  url(../public/about/LoopedDarkend2.gif);
+    background-image: url(../public/about/LoopedDarkend2.gif);
 
-            background-color: lightgray;
+    background-color: lightgray;
     background-blend-mode: hard-light;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -777,8 +780,8 @@
 .about-find-out-more-container {
     display: flex;
     position: relative;
-    background-image:  url(../public/about/LoopedDarkend2.gif);
-            background-color: lightgray;
+    background-image: url(../public/about/LoopedDarkend2.gif);
+    background-color: lightgray;
     background-blend-mode: hard-light;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -905,13 +908,14 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%;
+        width: 0%;
+
     }
 
     .about-find-out-more-logo-image {
         position: absolute;
-        left: -8rem;
-        width: 0rem;
+        left: 0;
+        width: 0;
     }
 
     .about-find-out-more-content {
@@ -928,6 +932,7 @@
     }
 
     .about-find-out-more-heading {
+        text-align: center;
         font-size: 5rem;
         color: #49ccfc;
         margin-top: 0;
@@ -935,6 +940,7 @@
     }
 
     .about-find-out-more-text {
+        text-align: center;
         width: 100%;
         font-size: 1.3rem;
         color: white;
@@ -961,8 +967,10 @@
     }
 
     .about-find-text {
+
         display: flex;
         flex-direction: row;
+
         width: 100%;
     }
 
@@ -983,15 +991,15 @@
     }
 
     .about-find-out-more-email-container {
-        margin-right: 0;
-        margin-left: auto;
         display: flex;
+        justify-content: end;
         width: 100%;
-        margin-top: 5rem;
+        margin-top: 2rem;
+        padding-right: 1rem;
+
     }
 
     .about-find-out-more-email-paragraph {
-        text-align: end;
         font-size: 1.3rem;
         color: white;
     }
