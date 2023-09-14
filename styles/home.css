@@ -684,6 +684,54 @@ s
     color: #ffffff;
 }
 
+/* media queries for interesting facts section */
+@media (max-width: 750px) {
+    .home-page-interesting-facts-container {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .home-page-interesting-facts-image-container {
+        width: 75%;
+        margin-left: 5rem;
+    }
+
+    .home-page-interesting-facts-content-container {
+        width: 100%;
+    }
+
+    .home-page-interesting-fact-image {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .home-heading-interesting-facts-text-one {
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    .home-interesting-facts-content {
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+
+    .home-interesting-facts-content-col {
+        width: 100%;
+        padding: 0;
+    }
+
+    .home-interesting-facts-title {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .home-interesting-facts-text {
+              text-align: center;
+        padding: 1rem;
+        font-size: 1rem;
+    }
+}
+
 
 
 
