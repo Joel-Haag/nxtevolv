@@ -8,7 +8,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 
 
-import {ABeeZee, Orbitron, Roboto} from 'next/font/google'
+import {ABeeZee, Orbitron, Roboto, Newsreader} from 'next/font/google'
 import CustomCursor from "@/components/CustomCursor/CustomCursor";
 import {Parallax} from "react-scroll-parallax";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -25,7 +25,7 @@ const titleText = ABeeZee({
     weight: '400'
 })
 
-const roboto = Roboto({
+const roboto = Newsreader({
     subsets: ['latin'],
     weight: '700'
 })
